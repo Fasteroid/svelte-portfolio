@@ -1,96 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		
-		<link rel="modulepreload" href="./_app/immutable/entry/start.11c087a1.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.b0c1c2c3.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.744c2a87.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.6dd94aae.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.f42ff5d7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.f8c5d532.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.8c46a6fa.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores.39e9296e.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.8f27967c.js"><title>Default Page</title><!-- HEAD_svelte-1yoiij0_START --><style lang="scss" data-svelte-h="svelte-kcf4qt">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #2f3234;
-  color: #eeeeee;
-  font-family: "Roboto Mono", monospace;
-  font-size: 11pt;
-  line-height: 1.25;
-  word-spacing: -0.75px;
-}
-
-section, h1 {
-  background-color: rgba(255, 255, 255, 0.0823529412);
-  padding: 15px;
-  text-align: justify;
-  display: block;
-}
-
-h1 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-img {
-  background-color: rgba(255, 255, 255, 0.0823529412);
-  padding: 15px 15px;
-  margin: 0 15px 15px 15px;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.p {
-  margin: 0 15px 15px 15px;
-  line-height: 140%;
-  width: auto;
-  white-space: pre-wrap;
-}
-
-.margins {
-  margin: auto;
-  max-width: min(80vw, 1920px);
-  padding: 10px;
-}
-
-.dubsp {
-  white-space: pre;
-}
-
-.emdash {
-  display: inline-block;
-  text-align: center;
-  width: 13pt;
-  transform: scale(1.7, 1);
-}
-
-li::marker {
-  font-size: 12pt;
-}
-
-ul {
-  margin: 0px;
-}
-
-a {
-  color: #b1b1ff;
-}
-a:visited {
-  color: #eca1ff;
-}
-
-::selection {
-  background: rgba(112, 176, 255, 0.2666666667);
-}</style><!-- HEAD_svelte-1yoiij0_END --><!-- HEAD_svelte-4wexu_START --><style lang="scss" data-svelte-h="svelte-1rqiik7">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
+import{s as O,n as S,c as F,d as G,u as Y,g as P,e as Z}from"../chunks/scheduler.b0c1c2c3.js";import{S as A,i as R,g as f,s as y,x as q,h,y as x,f as p,c as _,j,k as b,z as I,A as d,a as M,r as B,u as J,v as K,d as V,t as N,w as Q}from"../chunks/index.f8c5d532.js";import{b as E}from"../chunks/paths.6dd94aae.js";import{p as U}from"../chunks/stores.39e9296e.js";const W=!0,pn=Object.freeze(Object.defineProperty({__proto__:null,prerender:W},Symbol.toStringTag,{value:"Module"}));function X(i){let t,l=`@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
 @keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
@@ -325,36 +233,81 @@ nav .dropdown a:hover * {
   nav .dropdown-head {
     width: 80pt;
   }
-}</style><!-- HEAD_svelte-4wexu_END --><!-- HEAD_svelte-1nfz3yp_START --><!-- HEAD_svelte-1nfz3yp_END -->
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">    <nav><div class="home" data-svelte-h="svelte-1voqg75"><div class="home-wrapper"><div class="minecraftsplash">Now with Svelte!</div> <span>FAST&#39;S CODE CREATIONS</span></div></div> <div class="pages"><div class="dropdown" data-svelte-h="svelte-96ufve"><div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="/svelte-portfolio/assets/icons/discord.svg" class="icon" alt=""> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="assets/icons/github.svg" class="icon" alt=""> <span>Github</span></a></div></div></div> <div class="dropdown"><div class="dropdown-head" data-svelte-h="svelte-lkr1w7"><a href="/svelte-portfolio/about">About Me</a></div> <div class="dropdown-content" data-svelte-h="svelte-15kjhj6"><div class="dropdown-onload-wrapper"><a href="https://fasteroid.github.io/skilltree.html"><span>Skill Tree</span></a></div></div></div></div></nav>  
-			
-			<script>
-				{
-					__sveltekit_1gc3h4s = {
-						assets: "/svelte-portfolio",
-						base: new URL(".", location).pathname.slice(0, -1),
-						env: {}
-					};
+}`,r,a,o,c='<div class="home-wrapper"><div class="minecraftsplash">Now with Svelte!</div> <span>FAST&#39;S CODE CREATIONS</span></div>',v,e,n,s=`<div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="${E}/assets/icons/discord.svg" class="icon" alt=""/> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="assets/icons/github.svg" class="icon" alt=""/> <span>Github</span></a></div></div>`,L,m,g,D=`<a href="${E}/about">About Me</a>`,C,w,H='<div class="dropdown-onload-wrapper"><a href="https://fasteroid.github.io/skilltree.html"><span>Skill Tree</span></a></div>';return{c(){t=f("style"),t.textContent=l,r=y(),a=f("nav"),o=f("div"),o.innerHTML=c,v=y(),e=f("div"),n=f("div"),n.innerHTML=s,L=y(),m=f("div"),g=f("div"),g.innerHTML=D,C=y(),w=f("div"),w.innerHTML=H,this.h()},l(u){const k=q("svelte-4wexu",document.head);t=h(k,"STYLE",{lang:!0,"data-svelte-h":!0}),x(t)!=="svelte-1rqiik7"&&(t.textContent=l),k.forEach(p),r=_(u),a=h(u,"NAV",{});var $=j(a);o=h($,"DIV",{class:!0,"data-svelte-h":!0}),x(o)!=="svelte-1voqg75"&&(o.innerHTML=c),v=_($),e=h($,"DIV",{class:!0});var z=j(e);n=h(z,"DIV",{class:!0,"data-svelte-h":!0}),x(n)!=="svelte-96ufve"&&(n.innerHTML=s),L=_(z),m=h(z,"DIV",{class:!0});var T=j(m);g=h(T,"DIV",{"data-svelte-h":!0}),x(g)!=="svelte-lkr1w7"&&(g.innerHTML=D),C=_(T),w=h(T,"DIV",{class:!0,"data-svelte-h":!0}),x(w)!=="svelte-15kjhj6"&&(w.innerHTML=H),T.forEach(p),z.forEach(p),$.forEach(p),this.h()},h(){b(t,"lang","scss"),b(o,"class","home"),b(n,"class","dropdown"),I(g,"dropdown-head",!0),I(g,"cwd",`${E}/about`==i[0]),b(w,"class","dropdown-content"),b(m,"class","dropdown"),b(e,"class","pages")},m(u,k){d(document.head,t),M(u,r,k),M(u,a,k),d(a,o),d(a,v),d(a,e),d(e,n),d(e,L),d(e,m),d(m,g),d(m,C),d(m,w)},p:S,i:S,o:S,d(u){u&&(p(r),p(a)),p(t)}}}function nn(i,t,l){let r;return F(i,U,o=>l(1,r=o)),[r.url.pathname]}class tn extends A{constructor(t){super(),R(this,t,nn,X,O,{})}}function en(i){let t,l=`@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+body, html {
+  margin: 0;
+  padding: 0;
+}
 
-					const element = document.currentScript.parentElement;
+body {
+  background-color: #2f3234;
+  color: #eeeeee;
+  font-family: "Roboto Mono", monospace;
+  font-size: 11pt;
+  line-height: 1.25;
+  word-spacing: -0.75px;
+}
 
-					const data = [null,null];
+section, h1 {
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  padding: 15px;
+  text-align: justify;
+  display: block;
+}
 
-					Promise.all([
-						import("./_app/immutable/entry/start.11c087a1.js"),
-						import("./_app/immutable/entry/app.f42ff5d7.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element, {
-							node_ids: [0, 2],
-							data,
-							form: null,
-							error: null
-						});
-					});
-				}
-			</script>
-		</div>
-	</body>
-</html>
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+img {
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  padding: 15px 15px;
+  margin: 0 15px 15px 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.p {
+  margin: 0 15px 15px 15px;
+  line-height: 140%;
+  width: auto;
+  white-space: pre-wrap;
+}
+
+.margins {
+  margin: auto;
+  max-width: min(80vw, 1920px);
+  padding: 10px;
+}
+
+.dubsp {
+  white-space: pre;
+}
+
+.emdash {
+  display: inline-block;
+  text-align: center;
+  width: 13pt;
+  transform: scale(1.7, 1);
+}
+
+li::marker {
+  font-size: 12pt;
+}
+
+ul {
+  margin: 0px;
+}
+
+a {
+  color: #b1b1ff;
+}
+a:visited {
+  color: #eca1ff;
+}
+
+::selection {
+  background: rgba(112, 176, 255, 0.2666666667);
+}`,r,a,o,c;a=new tn({});const v=i[1].default,e=G(v,i,i[0],null);return{c(){t=f("style"),t.textContent=l,r=y(),B(a.$$.fragment),o=y(),e&&e.c(),this.h()},l(n){const s=q("svelte-1yoiij0",document.head);t=h(s,"STYLE",{lang:!0,"data-svelte-h":!0}),x(t)!=="svelte-kcf4qt"&&(t.textContent=l),s.forEach(p),r=_(n),J(a.$$.fragment,n),o=_(n),e&&e.l(n),this.h()},h(){b(t,"lang","scss")},m(n,s){d(document.head,t),M(n,r,s),K(a,n,s),M(n,o,s),e&&e.m(n,s),c=!0},p(n,[s]){e&&e.p&&(!c||s&1)&&Y(e,v,n,n[0],c?Z(v,n[0],s,null):P(n[0]),null)},i(n){c||(V(a.$$.fragment,n),V(e,n),c=!0)},o(n){N(a.$$.fragment,n),N(e,n),c=!1},d(n){n&&(p(r),p(o)),p(t),Q(a,n),e&&e.d(n)}}}function an(i,t,l){let{$$slots:r={},$$scope:a}=t;return i.$$set=o=>{"$$scope"in o&&l(0,a=o.$$scope)},[a,r]}class ln extends A{constructor(t){super(),R(this,t,an,en,O,{})}}export{ln as component,pn as universal};
