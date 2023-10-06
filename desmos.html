@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="modulepreload" href="./_app/immutable/entry/start.44096f05.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.2cdf953d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.5ba0c061.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.328adb05.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.7e0cc18c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.65d7753f.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.342088af.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.24c3be41.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/loader.7007bae2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.2645bfce.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.6f300174.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page.b748e252.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/datacomposer.b3c25c4c.js"><title> Fast's Code Creations | Desmos </title><!-- HEAD_svelte-1n5b8u4_START --><style lang="scss" data-svelte-h="svelte-wp533r">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2f3234;
+  color: #eeeeee;
+  font-family: "Roboto Mono", monospace;
+  font-size: 11pt;
+  line-height: 1.25;
+  word-spacing: -0.75px;
+}
+
+section, h1 {
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  padding: 15px;
+  text-align: justify;
+  display: block;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+img {
+  background-color: rgba(255, 255, 255, 0.0823529412);
+  padding: 15px 15px;
+  margin: 0 15px 15px 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+div.p {
+  margin: 0 15px 15px 15px;
+  line-height: 140%;
+}
+
+.margins {
+  margin: auto;
+  max-width: min(80vw, 1920px);
+  padding: 10px;
+}
+
+.dubsp {
+  white-space: pre;
+}
+
+li::marker {
+  font-size: 12pt;
+}
+
+ul {
+  margin: 0px;
+}
+
+a {
+  color: #b1b1ff;
+}
+a:visited {
+  color: #eca1ff;
+}
+
+::selection {
+  background: rgba(112, 176, 255, 0.2666666667);
+}
+
+span.emdash {
+  display: inline-block;
+  text-align: center;
+  width: 13pt;
+  transform: scale(1.7, 1);
+}</style><!-- HEAD_svelte-1n5b8u4_END --><!-- HEAD_svelte-1vz8yl4_START --><style lang="scss" data-svelte-h="svelte-1kt3vc9">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
+@keyframes neon-cyan-flickering {
+  0%, 60%, 62%, 98%, 100% {
+    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
+  }
+  61%, 99% {
+    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
+  }
+}
+@font-face {
+  font-family: Minecraft;
+  src: url("./../../assets/fonts/Minecraft.woff") format("woff");
+}
+.minecraftsplash {
+  color: #ff0;
+  position: absolute;
+  z-index: 2;
+  left: 100%;
+  font-family: "Minecraft", "fixedsys";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  white-space: pre;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  animation: minecraftwow 0.5s infinite;
+}
+
+@keyframes minecraftwow {
+  0% {
+    transform: translate(-50%, 60%) scale(0.95) rotate(-15deg);
+    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  }
+  50% {
+    transform: translate(-50%, 60%) scale(1) rotate(-15deg);
+    animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  100% {
+    transform: translate(-50%, 60%) scale(0.95) rotate(-15deg);
+    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  }
+}
+nav {
+  display: flex;
+  background: #000000;
+  font-family: "Recursive", sans-serif;
+  font-style: italic;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  z-index: 999; /* thank god this actually works for once */
+  /* This is literal magic, it cancels out the transitions that (incorrectly) trigger on page load. */
+  /* Glow animation stuff */
+}
+nav .home {
+  z-index: 1;
+}
+nav .home .home-wrapper {
+  width: max-content;
+  margin: auto;
+  padding: 15px;
+  font-size: 16pt;
+  color: #ffffff;
+  background: #000000;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+}
+nav .home .home-wrapper * {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+nav .home .home-wrapper span {
+  animation: neon-cyan-flickering 1s ease-in-out alternate infinite;
+}
+nav .dropdown {
+  position: relative;
+  cursor: pointer;
+  background: #000000;
+}
+@keyframes stopTransitionOnLoad {
+  from {
+    transform: translate(0, -100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+nav .dropdown-onload-wrapper {
+  animation: stopTransitionOnLoad 0.3s;
+}
+nav .dropdown-content, nav .dropdown-onload-wrapper {
+  z-index: 0;
+  display: block;
+  left: 0;
+  top: 90%;
+  width: 100%;
+}
+nav .dropdown-content {
+  box-shadow: 0px 0px 0px black;
+  position: absolute;
+  transform: translate(0, -100%);
+  transition: 0.3s;
+}
+nav .dropdown-head {
+  z-index: 1;
+  display: flex;
+  background: #000000;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 90%;
+  padding: 0 15px;
+}
+nav .pages > a {
+  padding: 0 15px;
+}
+nav .dropdown-content a {
+  background: #000000;
+  padding: 15px;
+  filter: none;
+  mix-blend-mode: screen; /* Needed so the glows from the icons merge additively */
+}
+nav .dropdown-content a span {
+  filter: none;
+}
+nav .dropdown-content .icon {
+  mix-blend-mode: screen; /* Needed so the glows from the icons merge additively */
+}
+nav .dropdown,
+nav .dropdown-content a,
+nav .pages > a {
+  font-size: 14pt;
+}
+nav .dropdown,
+nav .dropdown-content a,
+nav .dropdown-head a,
+nav .pages > a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav .dropdown-content a {
+  font-size: 12pt;
+}
+nav .active {
+  background: rgb(34, 34, 34) !important;
+}
+nav .icon {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  margin: 0px 10px 0px 0px;
+  display: inline;
+  max-height: 24px;
+}
+nav .dropdown > a {
+  text-decoration: none;
+}
+nav .dropdown:hover .dropdown-content {
+  transform: translate(0, 5px) translateZ(-1px);
+  box-shadow: 0px 0px 5px black;
+}
+nav .dropdown:hover > a > span,
+nav .dropdown:hover > .dropdown-head > a {
+  filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
+}
+nav .dropdown a:hover * { /* these looked obnoxious with the full glow */
+  filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
+}
+nav a span,
+nav .dropdown > a > span,
+nav .dropdown > .dropdown-head > a,
+nav .dropdown a * {
+  mix-blend-mode: screen;
+  transition: translate, filter 0.1s cubic-bezier(0.69, 0.02, 0.95, 0.6);
+  color: #ffffff;
+}
+nav a:hover span,
+nav .dropdown:hover > a > span,
+nav .dropdown:hover > .dropdown-head > a,
+nav .dropdown a:hover * {
+  mix-blend-mode: screen;
+  transition: translate, filter 0.2s cubic-bezier(0.05, 0.4, 0.22, 1) !important;
+  color: #ffffff;
+}
+@media screen and (orientation: portrait) {
+  nav {
+    display: flex;
+    flex-flow: column;
+  }
+  nav .home {
+    background-color: #000000;
+    text-align: center;
+    width: calc(100% - 30px);
+  }
+  nav .pages {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  nav .dropdown-head {
+    width: 100%;
+    padding: 15px;
+    /* 
+        in my testing, these looked good when scaled relative to view height on mobile
+        we can't let them grow too much though, or they spill out of their containers!
+    */
+    font-size: min(max(1.3vh, 14pt), 24pt);
+  }
+  nav .dropdown {
+    /* note: must be changed if I add more dropdowns! */
+    width: 25%;
+  }
+  nav .dropdown,
+  nav .dropdown-content a,
+  nav .pages > a {
+    font-size: min(max(1.2vh, 12pt), 24pt);
+  }
+}
+@media screen and (orientation: landscape) {
+  nav .pages {
+    margin-left: auto;
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+  }
+  nav .dropdown-head {
+    width: 80pt;
+  }
+}</style><!-- HEAD_svelte-1vz8yl4_END --><!-- HEAD_svelte-17mz2mj_START --><style lang="scss" data-svelte-h="svelte-1nvcm5a">@keyframes neon-cyan-flickering {
+  0%, 60%, 62%, 98%, 100% {
+    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
+  }
+  61%, 99% {
+    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
+  }
+}
+.headerimage-border {
+  margin: 15px 15px;
+  padding: 15px 15px;
+  max-width: calc(100% - 60px);
+}
+.headerimage-border .headerimage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  min-height: 200px;
+  max-height: 3in;
+  height: 20vw;
+}
+.headerimage-border .headerimage h1 {
+  background: rgba(132, 136, 138, 0.5333333333);
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 30px);
+  filter: drop-shadow(0 0 4px #000000);
+  font-size: max(24px, 1.8vh);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+section.no-background {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+section.extra-space, h1 {
+  margin: 15px 15px 15px 15px;
+}
+
+.project-shelf {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.project-shelf > a {
+  color: #eeeeee;
+  display: inline-block;
+  position: relative;
+  max-width: 20vh;
+  font-size: max(11pt, 2vw - 60px);
+  margin: 2.5px;
+  line-height: 130%;
+}
+.project-shelf > a:hover > img {
+  filter: drop-shadow(0 0 6pt rgba(255, 255, 255, 0.3333333333)) drop-shadow(0 0 3pt rgba(255, 255, 255, 0.8)) drop-shadow(0 0 1pt white);
+  min-width: calc(100% + min(20px, 10%));
+  margin: max(-10px, -5%);
+}
+.project-shelf img {
+  position: relative;
+  min-width: 100%;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  margin: 0;
+  transition-timing-function: linear;
+  transition: 0.4s;
+}
+
+@keyframes neon-cyan-flickering {
+  0%, 60%, 62%, 98%, 100% {
+    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
+  }
+  61%, 99% {
+    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
+  }
+}
+.project-shelf img {
+  padding: 10px;
+}
+
+.shortcut-title {
+  position: absolute;
+  bottom: 10%;
+  width: 90%;
+  text-align: center;
+  transform: translate(5%, 0);
+  color: #000;
+  text-shadow: -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, 0 0 0.5px #000, 0 0 0.5px #000;
+}</style><!-- HEAD_svelte-17mz2mj_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">    <nav><div class="home" data-svelte-h="svelte-1voqg75"><div class="home-wrapper"><div class="minecraftsplash">Now with Svelte!</div> <span>FAST&#39;S CODE CREATIONS</span></div></div> <div class="pages"><div class="dropdown" data-svelte-h="svelte-1tp0efu"><div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="/svelte-portfolio/assets/icons/discord.svg" class="icon" alt=""> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="/svelte-portfolio/assets/icons/github.svg" class="icon" alt=""> <span>Github</span></a></div></div></div> <div class="dropdown"><div class="dropdown-head"><a href="/svelte-portfolio/about">About Me</a></div>  </div><div class="dropdown"><div class="dropdown-head active"><a href="/svelte-portfolio/desmos">Desmos</a></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="/svelte-portfolio/desmos/portals"><span>Portals</span> </a></div> </div> </div></div></nav>   <body><div class="margins"><section><section class="headerimage-border"><div class="headerimage" style="background-image: url('assets/desmos/banner.jpg');"><h1><b>Desmos Projects</b></h1></div></section> <section class="no-background"><div class="project-shelf"><a href="/svelte-portfolio/desmos/portals"><img src="assets/desmos/portals.png" alt="thumbnail"> <div class="shortcut-title">Portals</div> </a></div></section></section></div></body> 
+			
+			<script>
+				{
+					__sveltekit_1iiv2c2 = {
+						assets: "/svelte-portfolio",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.44096f05.js"),
+						import("./_app/immutable/entry/app.7e0cc18c.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

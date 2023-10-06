@@ -1,0 +1,1 @@
+import{l as e}from"./_layout.24c3be41.js";import{d as o}from"./datacomposer.b3c25c4c.js";const t=o(e,{title:"Desmos"}),r=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{r as _,t as l};
