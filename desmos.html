@@ -5,20 +5,20 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link rel="modulepreload" href="./_app/immutable/entry/start.44096f05.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.6bbdc86d.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.2cdf953d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.5ba0c061.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.328adb05.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.7e0cc18c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.eab6b28f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.8c21a0fd.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.754cebf7.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.65d7753f.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.342088af.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.b58663d9.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.24c3be41.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/loader.7007bae2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores.2645bfce.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/5.6f300174.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/loader.6307ed7f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.4682d875.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.59f825cf.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_page.b748e252.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/datacomposer.b3c25c4c.js"><title> Fast's Code Creations | Desmos </title><!-- HEAD_svelte-1n5b8u4_START --><style lang="scss" data-svelte-h="svelte-wp533r">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+		<link rel="modulepreload" href="./_app/immutable/chunks/datacomposer.b3c25c4c.js"><title> Fast's Code Creations | Desmos </title><!-- HEAD_svelte-1j0xhs9_START --><style lang="scss" data-svelte-h="svelte-15oba1y">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 body, html {
   margin: 0;
   padding: 0;
@@ -33,17 +33,28 @@ body {
   word-spacing: -0.75px;
 }
 
-section, h1 {
+section, hgroup {
   background-color: rgba(255, 255, 255, 0.0823529412);
   padding: 15px;
   text-align: justify;
   display: block;
 }
 
-h1 {
-  font-size: 24px;
+hgroup {
   text-align: center;
   margin-bottom: 15px;
+}
+hgroup * {
+  margin: 0;
+}
+hgroup h1 {
+  font-size: 24px;
+}
+hgroup h2 {
+  font-size: 16pt;
+}
+hgroup h3 {
+  font-size: 12pt;
 }
 
 img {
@@ -57,6 +68,7 @@ img {
 div.p {
   margin: 0 15px 15px 15px;
   line-height: 140%;
+  width: auto;
 }
 
 .margins {
@@ -93,7 +105,7 @@ span.emdash {
   text-align: center;
   width: 13pt;
   transform: scale(1.7, 1);
-}</style><!-- HEAD_svelte-1n5b8u4_END --><!-- HEAD_svelte-1vz8yl4_START --><style lang="scss" data-svelte-h="svelte-1kt3vc9">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
+}</style><!-- HEAD_svelte-1j0xhs9_END --><!-- HEAD_svelte-87cjpy_START --><style lang="scss" data-svelte-h="svelte-2blbj7">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
 @keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
@@ -104,12 +116,12 @@ span.emdash {
 }
 @font-face {
   font-family: Minecraft;
-  src: url("./../../assets/fonts/Minecraft.woff") format("woff");
+  src: url("/assets/fonts/Minecraft.woff") format("woff");
 }
 .minecraftsplash {
   color: #ff0;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   left: 100%;
   font-family: "Minecraft", "fixedsys";
   font-weight: normal;
@@ -117,22 +129,21 @@ span.emdash {
   font-size: 16px;
   text-align: center;
   white-space: pre;
-  font-smooth: never;
   -webkit-font-smoothing: none;
   animation: minecraftwow 0.5s infinite;
 }
 
 @keyframes minecraftwow {
   0% {
-    transform: translate(-50%, 60%) scale(0.95) rotate(-15deg);
+    transform: translate(calc(-50% + 0.5px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
     animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
   }
   50% {
-    transform: translate(-50%, 60%) scale(1) rotate(-15deg);
+    transform: translate(calc(-50% + 0.5px), calc(60% - 0.6px)) scale(1) rotate(-15deg);
     animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
   }
   100% {
-    transform: translate(-50%, 60%) scale(0.95) rotate(-15deg);
+    transform: translate(calc(-50% + 0.5px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
     animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
   }
 }
@@ -147,6 +158,9 @@ nav {
   z-index: 999; /* thank god this actually works for once */
   /* This is literal magic, it cancels out the transitions that (incorrectly) trigger on page load. */
   /* Glow animation stuff */
+}
+nav .pages {
+  z-index: 0; /* fixes the minecraft splash */
 }
 nav .home {
   z-index: 1;
@@ -328,7 +342,7 @@ nav .dropdown a:hover * {
   nav .dropdown-head {
     width: 80pt;
   }
-}</style><!-- HEAD_svelte-1vz8yl4_END --><!-- HEAD_svelte-17mz2mj_START --><style lang="scss" data-svelte-h="svelte-1nvcm5a">@keyframes neon-cyan-flickering {
+}</style><!-- HEAD_svelte-87cjpy_END --><!-- HEAD_svelte-lo8ngf_START --><style lang="scss" data-svelte-h="svelte-1t18op6">@keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
   }
@@ -349,18 +363,18 @@ nav .dropdown a:hover * {
   min-height: 200px;
   max-height: 3in;
   height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.headerimage-border .headerimage h1 {
+.headerimage-border .headerimage hgroup {
   background: rgba(132, 136, 138, 0.5333333333);
   display: block;
   position: relative;
   text-align: center;
   margin-bottom: 0;
-  width: auto;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% + 30px);
+  margin-left: -15px;
+  margin-right: -15px;
   filter: drop-shadow(0 0 4px #000000);
   font-size: max(24px, 1.8vh);
   margin-block-start: 0;
@@ -371,7 +385,7 @@ section.no-background {
   background-color: rgba(0, 0, 0, 0);
 }
 
-section.extra-space, h1 {
+section.extra-space, hgroup {
   margin: 15px 15px 15px 15px;
 }
 
@@ -427,14 +441,14 @@ section.extra-space, h1 {
   transform: translate(5%, 0);
   color: #000;
   text-shadow: -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, 0 0 0.5px #000, 0 0 0.5px #000;
-}</style><!-- HEAD_svelte-17mz2mj_END -->
+}</style><!-- HEAD_svelte-lo8ngf_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">    <nav><div class="home" data-svelte-h="svelte-1voqg75"><div class="home-wrapper"><div class="minecraftsplash">Now with Svelte!</div> <span>FAST&#39;S CODE CREATIONS</span></div></div> <div class="pages"><div class="dropdown" data-svelte-h="svelte-1tp0efu"><div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="/svelte-portfolio/assets/icons/discord.svg" class="icon" alt=""> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="/svelte-portfolio/assets/icons/github.svg" class="icon" alt=""> <span>Github</span></a></div></div></div> <div class="dropdown"><div class="dropdown-head"><a href="/svelte-portfolio/about">About Me</a></div>  </div><div class="dropdown"><div class="dropdown-head active"><a href="/svelte-portfolio/desmos">Desmos</a></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="/svelte-portfolio/desmos/portals"><span>Portals</span> </a></div> </div> </div></div></nav>   <body><div class="margins"><section><section class="headerimage-border"><div class="headerimage" style="background-image: url('assets/desmos/banner.jpg');"><h1><b>Desmos Projects</b></h1></div></section> <section class="no-background"><div class="project-shelf"><a href="/svelte-portfolio/desmos/portals"><img src="assets/desmos/portals.png" alt="thumbnail"> <div class="shortcut-title">Portals</div> </a></div></section></section></div></body> 
+		<div style="display: contents">    <nav><div class="home" data-svelte-h="svelte-1s6thel"><div class="home-wrapper"><span>FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash">Now with Svelte!</div></div></div> <div class="pages"><div class="dropdown" data-svelte-h="svelte-1tp0efu"><div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="/svelte-portfolio/assets/icons/discord.svg" class="icon" alt=""> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="/svelte-portfolio/assets/icons/github.svg" class="icon" alt=""> <span>Github</span></a></div></div></div> <div class="dropdown"><div class="dropdown-head"><a href="/svelte-portfolio/about">About Me</a></div>  </div><div class="dropdown"><div class="dropdown-head active"><a href="/svelte-portfolio/desmos">Desmos</a></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="/svelte-portfolio/desmos/portals"><span>Portals</span> </a></div> </div> </div></div></nav>   <body><div class="margins"><section><section class="headerimage-border"><div class="headerimage" style="background-image: url('assets/desmos/banner.jpg');"><hgroup><h1>Desmos Projects</h1></hgroup></div></section> <section class="no-background"><div class="project-shelf"><a href="/svelte-portfolio/desmos/portals"><img src="assets/desmos/portals.png" alt="thumbnail"> <div class="shortcut-title">Portals</div> </a></div></section></section></div></body> 
 			
 			<script>
 				{
-					__sveltekit_1iiv2c2 = {
+					__sveltekit_174uvod = {
 						assets: "/svelte-portfolio",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -445,8 +459,8 @@ section.extra-space, h1 {
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.44096f05.js"),
-						import("./_app/immutable/entry/app.7e0cc18c.js")
+						import("./_app/immutable/entry/start.6bbdc86d.js"),
+						import("./_app/immutable/entry/app.754cebf7.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],
