@@ -1,4 +1,4 @@
-import{l}from"../chunks/_page.b748e252.js";import{s as f,d as g,u as x,g as c,e as h}from"../chunks/scheduler.2cdf953d.js";import{S as m,i as b,g as u,s as w,x as _,h as y,y as k,f as d,c as v,k as j,z as $,a as z,d as S,t as C}from"../chunks/index.65d7753f.js";const M=Object.freeze(Object.defineProperty({__proto__:null,load:l},Symbol.toStringTag,{value:"Module"}));function E(r){let t,i=`@keyframes neon-cyan-flickering {
+import{s as l,d as g,u as x,g as f,e as h}from"../chunks/scheduler.2cdf953d.js";import{S as c,i as m,g as b,s as u,x as w,h as _,y as k,f as d,c as y,k as v,z as $,a as j,d as z,t as C}from"../chunks/index.65d7753f.js";function S(r){let t,i=`@keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
   }
@@ -29,8 +29,9 @@ import{l}from"../chunks/_page.b748e252.js";import{s as f,d as g,u as x,g as c,e 
   position: relative;
   text-align: center;
   margin-bottom: 0;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding: 20px 0;
   filter: drop-shadow(0 0 4px #000000);
   font-size: max(24px, 1.8vh);
   margin-block-start: 0;
@@ -86,7 +87,7 @@ section.extra-space, hgroup {
   }
 }
 .project-shelf img {
-  padding: 10px;
+  padding: 5px;
 }
 
 .shortcut-title {
@@ -97,4 +98,4 @@ section.extra-space, hgroup {
   transform: translate(5%, 0);
   color: #000;
   text-shadow: -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, 0 0 0.5px #000, 0 0 0.5px #000;
-}`,p,a;const s=r[1].default,e=g(s,r,r[0],null);return{c(){t=u("style"),t.textContent=i,p=w(),e&&e.c(),this.h()},l(n){const o=_("svelte-lo8ngf",document.head);t=y(o,"STYLE",{lang:!0,"data-svelte-h":!0}),k(t)!=="svelte-1t18op6"&&(t.textContent=i),o.forEach(d),p=v(n),e&&e.l(n),this.h()},h(){j(t,"lang","scss")},m(n,o){$(document.head,t),z(n,p,o),e&&e.m(n,o),a=!0},p(n,[o]){e&&e.p&&(!a||o&1)&&x(e,s,n,n[0],a?h(s,n[0],o,null):c(n[0]),null)},i(n){a||(S(e,n),a=!0)},o(n){C(e,n),a=!1},d(n){n&&d(p),d(t),e&&e.d(n)}}}function L(r,t,i){let{$$slots:p={},$$scope:a}=t;return r.$$set=s=>{"$$scope"in s&&i(0,a=s.$$scope)},[a,p]}class P extends m{constructor(t){super(),b(this,t,L,E,f,{})}}export{P as component,M as universal};
+}`,p,a;const s=r[1].default,e=g(s,r,r[0],null);return{c(){t=b("style"),t.textContent=i,p=u(),e&&e.c(),this.h()},l(n){const o=w("svelte-139g6il",document.head);t=_(o,"STYLE",{lang:!0,"data-svelte-h":!0}),k(t)!=="svelte-driaws"&&(t.textContent=i),o.forEach(d),p=y(n),e&&e.l(n),this.h()},h(){v(t,"lang","scss")},m(n,o){$(document.head,t),j(n,p,o),e&&e.m(n,o),a=!0},p(n,[o]){e&&e.p&&(!a||o&1)&&x(e,s,n,n[0],a?h(s,n[0],o,null):f(n[0]),null)},i(n){a||(z(e,n),a=!0)},o(n){C(e,n),a=!1},d(n){n&&d(p),d(t),e&&e.d(n)}}}function E(r,t,i){let{$$slots:p={},$$scope:a}=t;return r.$$set=s=>{"$$scope"in s&&i(0,a=s.$$scope)},[a,p]}class T extends c{constructor(t){super(),m(this,t,E,S,l,{})}}export{T as component};
