@@ -1,4 +1,4 @@
-import{_ as wn}from"../chunks/_layout.24c3be41.js";import{s as H,n as L,c as O,d as J,u as K,g as Q,e as U}from"../chunks/scheduler.2cdf953d.js";import{S as F,i as G,g as v,s as k,x as Y,h as w,y as E,f as g,c as z,j as _,k as b,z as u,a as C,A as q,m as B,n as W,B as I,r as X,u as nn,v as tn,d as M,t as S,w as en}from"../chunks/index.65d7753f.js";import{e as D,p as A}from"../chunks/loader.7401a9cc.js";import{b as P}from"../chunks/paths.9b6f482a.js";import{p as Z}from"../chunks/stores.ad468fe8.js";function V(s,n,r){const o=s.slice();return o[3]=n[r],o}function N(s,n,r){const o=s.slice();return o[6]=n[r],o}function an(s){let n,r,o=D(s[3].getChildren()),a=[];for(let t=0;t<o.length;t+=1)a[t]=j(N(s,o,t));return{c(){n=v("div"),r=v("div");for(let t=0;t<a.length;t+=1)a[t].c();this.h()},l(t){n=w(t,"DIV",{class:!0});var l=_(n);r=w(l,"DIV",{class:!0});var e=_(r);for(let p=0;p<a.length;p+=1)a[p].l(e);e.forEach(g),l.forEach(g),this.h()},h(){b(r,"class","dropdown-onload-wrapper"),b(n,"class","dropdown-content")},m(t,l){C(t,n,l),u(n,r);for(let e=0;e<a.length;e+=1)a[e]&&a[e].m(r,null)},p(t,l){if(l&1){o=D(t[3].getChildren());let e;for(e=0;e<o.length;e+=1){const p=N(t,o,e);a[e]?a[e].p(p,l):(a[e]=j(p),a[e].c(),a[e].m(r,null))}for(;e<a.length;e+=1)a[e].d(1);a.length=o.length}},d(t){t&&g(n),q(a,t)}}}function j(s){let n,r,o=s[6].pageData.title+"",a,t;return{c(){n=v("a"),r=v("span"),a=B(o),t=k(),this.h()},l(l){n=w(l,"A",{href:!0});var e=_(n);r=w(e,"SPAN",{});var p=_(r);a=W(p,o),p.forEach(g),t=z(e),e.forEach(g),this.h()},h(){b(n,"href",s[6].webPath),I(n,"active",s[0](`${s[6].webPath}`))},m(l,e){C(l,n,e),u(n,r),u(r,a),u(n,t)},p:L,d(l){l&&g(n)}}}function R(s){let n,r,o,a=s[3].pageData.title+"",t,l,e=s[3].getChildren(),p,d=e&&an(s);return{c(){n=v("div"),r=v("div"),o=v("a"),t=B(a),l=k(),d&&d.c(),p=k(),this.h()},l(i){n=w(i,"DIV",{class:!0});var c=_(n);r=w(c,"DIV",{});var x=_(r);o=w(x,"A",{href:!0});var f=_(o);t=W(f,a),f.forEach(g),x.forEach(g),l=z(c),d&&d.l(c),p=z(c),c.forEach(g),this.h()},h(){b(o,"href",s[3].webPath),I(r,"dropdown-head",!0),I(r,"active",s[0](s[3].webPath)),b(n,"class","dropdown")},m(i,c){C(i,n,c),u(n,r),u(r,o),u(o,t),u(n,l),d&&d.m(n,null),u(n,p)},p(i,c){e&&d.p(i,c)},d(i){i&&g(n),d&&d.d()}}}function on(s){let n,r=`@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
+import{_ as wn}from"../chunks/_layout.24c3be41.js";import{s as H,n as L,c as O,d as J,u as K,g as Q,e as U}from"../chunks/scheduler.2cdf953d.js";import{S as q,i as F,g as v,s as k,x as G,h as w,y as E,f as g,c as z,j as _,k as b,z as u,a as C,A as Y,m as B,n as W,B as I,r as X,u as nn,v as tn,d as S,t as A,w as en}from"../chunks/index.65d7753f.js";import{e as D,p as P}from"../chunks/loader.02f65cef.js";import{b as V}from"../chunks/paths.4bdd7ec8.js";import{p as Z}from"../chunks/stores.d8691b2c.js";function N(s,n,r){const o=s.slice();return o[3]=n[r],o}function j(s,n,r){const o=s.slice();return o[6]=n[r],o}function an(s){let n,r,o=D(s[3].getChildren()),a=[];for(let t=0;t<o.length;t+=1)a[t]=M(j(s,o,t));return{c(){n=v("div"),r=v("div");for(let t=0;t<a.length;t+=1)a[t].c();this.h()},l(t){n=w(t,"DIV",{class:!0});var d=_(n);r=w(d,"DIV",{class:!0});var e=_(r);for(let p=0;p<a.length;p+=1)a[p].l(e);e.forEach(g),d.forEach(g),this.h()},h(){b(r,"class","dropdown-onload-wrapper"),b(n,"class","dropdown-content")},m(t,d){C(t,n,d),u(n,r);for(let e=0;e<a.length;e+=1)a[e]&&a[e].m(r,null)},p(t,d){if(d&1){o=D(t[3].getChildren());let e;for(e=0;e<o.length;e+=1){const p=j(t,o,e);a[e]?a[e].p(p,d):(a[e]=M(p),a[e].c(),a[e].m(r,null))}for(;e<a.length;e+=1)a[e].d(1);a.length=o.length}},d(t){t&&g(n),Y(a,t)}}}function M(s){let n,r,o=s[6].pageData.title+"",a,t;return{c(){n=v("a"),r=v("span"),a=B(o),t=k(),this.h()},l(d){n=w(d,"A",{href:!0});var e=_(n);r=w(e,"SPAN",{});var p=_(r);a=W(p,o),p.forEach(g),t=z(e),e.forEach(g),this.h()},h(){b(n,"href",s[6].webPath),I(n,"active",s[0](`${s[6].webPath}`))},m(d,e){C(d,n,e),u(n,r),u(r,a),u(n,t)},p:L,d(d){d&&g(n)}}}function R(s){let n,r,o,a=s[3].pageData.title+"",t,d,e=s[3].getChildren(),p,l=e&&an(s);return{c(){n=v("div"),r=v("div"),o=v("a"),t=B(a),d=k(),l&&l.c(),p=k(),this.h()},l(i){n=w(i,"DIV",{class:!0});var c=_(n);r=w(c,"DIV",{});var x=_(r);o=w(x,"A",{href:!0});var f=_(o);t=W(f,a),f.forEach(g),x.forEach(g),d=z(c),l&&l.l(c),p=z(c),c.forEach(g),this.h()},h(){b(o,"href",s[3].webPath),I(r,"dropdown-head",!0),I(r,"active",s[0](s[3].webPath)),b(n,"class","dropdown")},m(i,c){C(i,n,c),u(n,r),u(r,o),u(o,t),u(n,d),l&&l.m(n,null),u(n,p)},p(i,c){e&&l.p(i,c)},d(i){i&&g(n),l&&l.d()}}}function on(s){let n,r=`@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
 @keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
@@ -8,15 +8,15 @@ import{_ as wn}from"../chunks/_layout.24c3be41.js";import{s as H,n as L,c as O,d
   }
 }
 @font-face {
-  font-family: Minecraft;
-  src: url("/assets/fonts/Minecraft.woff") format("woff");
+  font-family: minecraft;
+  src: url("assets/fonts/minecraft.woff") format("woff");
 }
 .minecraftsplash {
   color: #ff0;
   position: absolute;
   z-index: 1;
   left: 100%;
-  font-family: "Minecraft", "fixedsys";
+  font-family: "minecraft", "fixedsys";
   font-weight: normal;
   font-style: normal;
   font-size: 11pt;
@@ -28,15 +28,15 @@ import{_ as wn}from"../chunks/_layout.24c3be41.js";import{s as H,n as L,c as O,d
 
 @keyframes minecraftwow {
   0% {
-    transform: translate(calc(-50% + 0.5px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
+    transform: translate(calc(-60% + 0.6px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
     animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
   }
   50% {
-    transform: translate(calc(-50% + 0.5px), calc(60% - 0.6px)) scale(1) rotate(-15deg);
+    transform: translate(calc(-60% + 0.6px), calc(60% - 0.6px)) scale(1) rotate(-15deg);
     animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
   }
   100% {
-    transform: translate(calc(-50% + 0.5px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
+    transform: translate(calc(-60% + 0.6px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
     animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
   }
 }
@@ -235,7 +235,7 @@ nav .dropdown a:hover * {
   nav .dropdown-head {
     width: 80pt;
   }
-}`,o,a,t,l='<div class="home-wrapper"><span>FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash">Now with Svelte!</div></div>',e,p,d,i=`<div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="${P}/assets/icons/discord.svg" class="icon" alt=""/> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="${P}/assets/icons/github.svg" class="icon" alt=""/> <span>Github</span></a></div></div>`,c,x=D(A.getChildren()),f=[];for(let m=0;m<x.length;m+=1)f[m]=R(V(s,x,m));return{c(){n=v("style"),n.textContent=r,o=k(),a=v("nav"),t=v("div"),t.innerHTML=l,e=k(),p=v("div"),d=v("div"),d.innerHTML=i,c=k();for(let m=0;m<f.length;m+=1)f[m].c();this.h()},l(m){const y=Y("svelte-1lf77a9",document.head);n=w(y,"STYLE",{lang:!0,"data-svelte-h":!0}),E(n)!=="svelte-15zf514"&&(n.textContent=r),y.forEach(g),o=z(m),a=w(m,"NAV",{});var h=_(a);t=w(h,"DIV",{class:!0,"data-svelte-h":!0}),E(t)!=="svelte-1s6thel"&&(t.innerHTML=l),e=z(h),p=w(h,"DIV",{class:!0});var $=_(p);d=w($,"DIV",{class:!0,"data-svelte-h":!0}),E(d)!=="svelte-1tp0efu"&&(d.innerHTML=i),c=z($);for(let T=0;T<f.length;T+=1)f[T].l($);$.forEach(g),h.forEach(g),this.h()},h(){b(n,"lang","scss"),b(t,"class","home"),b(d,"class","dropdown"),b(p,"class","pages")},m(m,y){u(document.head,n),C(m,o,y),C(m,a,y),u(a,t),u(a,e),u(a,p),u(p,d),u(p,c);for(let h=0;h<f.length;h+=1)f[h]&&f[h].m(p,null)},p(m,[y]){if(y&1){x=D(A.getChildren());let h;for(h=0;h<x.length;h+=1){const $=V(m,x,h);f[h]?f[h].p($,y):(f[h]=R($),f[h].c(),f[h].m(p,null))}for(;h<f.length;h+=1)f[h].d(1);f.length=x.length}},i:L,o:L,d(m){m&&(g(o),g(a)),g(n),q(f,m)}}}function rn(s,n,r){let o;O(s,Z,l=>r(1,o=l));const a=o.url.pathname;function t(l){return a.startsWith(l)}return[t]}class sn extends F{constructor(n){super(),G(this,n,rn,on,H,{})}}function ln(s){let n,r=`@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+}`,o,a,t,d='<div class="home-wrapper"><span>FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash">Now with Svelte!</div></div>',e,p,l,i=`<div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="${V}/assets/icons/discord.svg" class="icon" alt=""/> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="${V}/assets/icons/github.svg" class="icon" alt=""/> <span>Github</span></a></div></div>`,c,x=D(P.getChildren()),f=[];for(let m=0;m<x.length;m+=1)f[m]=R(N(s,x,m));return{c(){n=v("style"),n.textContent=r,o=k(),a=v("nav"),t=v("div"),t.innerHTML=d,e=k(),p=v("div"),l=v("div"),l.innerHTML=i,c=k();for(let m=0;m<f.length;m+=1)f[m].c();this.h()},l(m){const y=G("svelte-1taauq4",document.head);n=w(y,"STYLE",{lang:!0,"data-svelte-h":!0}),E(n)!=="svelte-swc6md"&&(n.textContent=r),y.forEach(g),o=z(m),a=w(m,"NAV",{});var h=_(a);t=w(h,"DIV",{class:!0,"data-svelte-h":!0}),E(t)!=="svelte-1s6thel"&&(t.innerHTML=d),e=z(h),p=w(h,"DIV",{class:!0});var $=_(p);l=w($,"DIV",{class:!0,"data-svelte-h":!0}),E(l)!=="svelte-1tp0efu"&&(l.innerHTML=i),c=z($);for(let T=0;T<f.length;T+=1)f[T].l($);$.forEach(g),h.forEach(g),this.h()},h(){b(n,"lang","scss"),b(t,"class","home"),b(l,"class","dropdown"),b(p,"class","pages")},m(m,y){u(document.head,n),C(m,o,y),C(m,a,y),u(a,t),u(a,e),u(a,p),u(p,l),u(p,c);for(let h=0;h<f.length;h+=1)f[h]&&f[h].m(p,null)},p(m,[y]){if(y&1){x=D(P.getChildren());let h;for(h=0;h<x.length;h+=1){const $=N(m,x,h);f[h]?f[h].p($,y):(f[h]=R($),f[h].c(),f[h].m(p,null))}for(;h<f.length;h+=1)f[h].d(1);f.length=x.length}},i:L,o:L,d(m){m&&(g(o),g(a)),g(n),Y(f,m)}}}function rn(s,n,r){let o;O(s,Z,d=>r(1,o=d));const a=o.url.pathname;function t(d){return a.startsWith(d)}return[t]}class sn extends q{constructor(n){super(),F(this,n,rn,on,H,{})}}function dn(s){let n,r=`@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 body, html {
   margin: 0;
   padding: 0;
@@ -323,8 +323,8 @@ span.emdash {
   text-align: center;
   width: 13pt;
   transform: scale(1.7, 1);
-}`,o,a,t,l,e;document.title=o=`
+}`,o,a,t,d,e;document.title=o=`
         `+s[0].titlePath.join(" | ")+`
-    `,t=new sn({});const p=s[3].default,d=J(p,s,s[2],null);return{c(){n=v("style"),n.textContent=r,a=k(),X(t.$$.fragment),l=k(),d&&d.c(),this.h()},l(i){const c=Y("svelte-10yebmf",document.head);n=w(c,"STYLE",{lang:!0,"data-svelte-h":!0}),E(n)!=="svelte-16evmz4"&&(n.textContent=r),c.forEach(g),a=z(i),nn(t.$$.fragment,i),l=z(i),d&&d.l(i),this.h()},h(){b(n,"lang","scss")},m(i,c){u(document.head,n),C(i,a,c),tn(t,i,c),C(i,l,c),d&&d.m(i,c),e=!0},p(i,[c]){(!e||c&1)&&o!==(o=`
+    `,t=new sn({});const p=s[3].default,l=J(p,s,s[2],null);return{c(){n=v("style"),n.textContent=r,a=k(),X(t.$$.fragment),d=k(),l&&l.c(),this.h()},l(i){const c=G("svelte-10yebmf",document.head);n=w(c,"STYLE",{lang:!0,"data-svelte-h":!0}),E(n)!=="svelte-16evmz4"&&(n.textContent=r),c.forEach(g),a=z(i),nn(t.$$.fragment,i),d=z(i),l&&l.l(i),this.h()},h(){b(n,"lang","scss")},m(i,c){u(document.head,n),C(i,a,c),tn(t,i,c),C(i,d,c),l&&l.m(i,c),e=!0},p(i,[c]){(!e||c&1)&&o!==(o=`
         `+i[0].titlePath.join(" | ")+`
-    `)&&(document.title=o),d&&d.p&&(!e||c&4)&&K(d,p,i,i[2],e?U(p,i[2],c,null):Q(i[2]),null)},i(i){e||(M(t.$$.fragment,i),M(d,i),e=!0)},o(i){S(t.$$.fragment,i),S(d,i),e=!1},d(i){i&&(g(a),g(l)),g(n),en(t,i),d&&d.d(i)}}}function dn(s,n,r){let o,a;O(s,Z,e=>r(1,a=e));let{$$slots:t={},$$scope:l}=n;return s.$$set=e=>{"$$scope"in e&&r(2,l=e.$$scope)},s.$$.update=()=>{s.$$.dirty&2&&r(0,o=a.data)},[o,a,l,t]}class mn extends F{constructor(n){super(),G(this,n,dn,ln,H,{})}}export{mn as component,wn as universal};
+    `)&&(document.title=o),l&&l.p&&(!e||c&4)&&K(l,p,i,i[2],e?U(p,i[2],c,null):Q(i[2]),null)},i(i){e||(S(t.$$.fragment,i),S(l,i),e=!0)},o(i){A(t.$$.fragment,i),A(l,i),e=!1},d(i){i&&(g(a),g(d)),g(n),en(t,i),l&&l.d(i)}}}function ln(s,n,r){let o,a;O(s,Z,e=>r(1,a=e));let{$$slots:t={},$$scope:d}=n;return s.$$set=e=>{"$$scope"in e&&r(2,d=e.$$scope)},s.$$.update=()=>{s.$$.dirty&2&&r(0,o=a.data)},[o,a,d,t]}class mn extends q{constructor(n){super(),F(this,n,ln,dn,H,{})}}export{mn as component,wn as universal};
