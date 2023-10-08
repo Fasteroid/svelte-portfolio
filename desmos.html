@@ -5,19 +5,19 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link rel="modulepreload" href="./_app/immutable/entry/start.8039248b.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.ec041ec9.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.2cdf953d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.a275d716.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.9c1f8d51.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.3741c177.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.0dcbbec7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.a5d2ac93.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.cd9a2ea0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.65d7753f.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.7cc5ba82.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.db5c3424.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.24c3be41.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/loader.82554536.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/stores.53797e5d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/loader.ba5664df.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.d03826f8.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/2.78b0191f.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/5.d20e160d.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/5.5b0f15f4.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_page.b748e252.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/datacomposer.b3c25c4c.js"><title> Fast's Code Creations | Desmos </title><!-- HEAD_svelte-10yebmf_START --><style lang="scss" data-svelte-h="svelte-16evmz4">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 body, html {
@@ -107,7 +107,7 @@ span.emdash {
   text-align: center;
   width: 13pt;
   transform: scale(1.7, 1);
-}</style><!-- HEAD_svelte-10yebmf_END --><!-- HEAD_svelte-hld1ku_START --><style lang="scss" data-svelte-h="svelte-uk9isr">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
+}</style><!-- HEAD_svelte-10yebmf_END --><!-- HEAD_svelte-qle18i_START --><style lang="scss" data-svelte-h="svelte-cdy35j">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
 @keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
@@ -117,15 +117,19 @@ span.emdash {
   }
 }
 @font-face {
-  font-family: minecraft;
-  src: url("../../assets/fonts/minecraft.woff") format("woff");
+  font-family: minecraft_dev;
+  src: url("../assets/fonts/minecraft.woff") format("woff");
+}
+@font-face {
+  font-family: minecraft_prod;
+  src: url("/svelte-portfolio/assets/fonts/minecraft.woff") format("woff");
 }
 .minecraftsplash {
   color: #ff0;
   position: absolute;
   z-index: 1;
   left: 100%;
-  font-family: "minecraft", "fixedsys";
+  font-family: "minecraft_prod", "minecraft_dev", "fixedsys";
   font-weight: normal;
   font-style: normal;
   font-size: 11pt;
@@ -344,7 +348,7 @@ nav .dropdown a:hover * {
   nav .dropdown-head {
     width: 80pt;
   }
-}</style><!-- HEAD_svelte-hld1ku_END --><!-- HEAD_svelte-139g6il_START --><style lang="scss" data-svelte-h="svelte-driaws">@keyframes neon-cyan-flickering {
+}</style><!-- HEAD_svelte-qle18i_END --><!-- HEAD_svelte-139g6il_START --><style lang="scss" data-svelte-h="svelte-driaws">@keyframes neon-cyan-flickering {
   0%, 60%, 62%, 98%, 100% {
     filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
   }
@@ -451,7 +455,7 @@ section.extra-space, hgroup {
 			
 			<script>
 				{
-					__sveltekit_gacrbl = {
+					__sveltekit_8jrr0a = {
 						assets: "/svelte-portfolio",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -462,8 +466,8 @@ section.extra-space, hgroup {
 					const data = [null,null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.8039248b.js"),
-						import("./_app/immutable/entry/app.3741c177.js")
+						import("./_app/immutable/entry/start.ec041ec9.js"),
+						import("./_app/immutable/entry/app.cd9a2ea0.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 5],
