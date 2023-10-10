@@ -1,6 +1,9 @@
+<script lang="ts" context="module" ssr>
+    import { pagetree } from "$lib/loader";
+</script>
+
 <script lang="ts">
     import { page } from "$app/stores";
-    import { pagetree } from "$lib/loader";
     import { base } from "$app/paths";
     import BackgroundTitle from "../titlebar/BackgroundTitle.svelte";
 
@@ -25,7 +28,7 @@
                 {#each pagetree.getChildrenAtPath(`/${topic}`) as node}
                     <a href="{node.webPath}">
                         <img src="{ sanitizeThumbnail(node.pageData?.thumbnail) }" alt="thumbnail">
-                        <div class="project-title">{ node.pageData?.longTitle || node.pageData?.title }</div>
+                        <div class="project-title">{ node.pageData?.title }</div>
                     </a>
                 {/each}
             </div>

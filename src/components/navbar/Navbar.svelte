@@ -1,13 +1,11 @@
 <script lang="ts">
-    import { base } from "$app/paths";
     import { page } from '$app/stores';
-    import { pagetree } from "$lib/loader";
-
+    import { base } from "$app/paths";
+        
     const currentPage = $page.url.pathname;
     function isActive(page: string): boolean {
         return currentPage.startsWith(page)
     }
-
 </script>
 
 <style lang="scss">
@@ -15,7 +13,6 @@
 </style>
 
 <nav>
-    
     <div class="home">
         <div class="home-wrapper">
             <span>FAST'S CODE CREATIONS</span>
@@ -40,6 +37,7 @@
                 </div>
             </div>
         </div>
+        <!--
         {#each pagetree.getChildren() as main}
             <div class="dropdown">
                 <div class:dropdown-head={true} class:active={isActive(main.webPath)}>
@@ -58,5 +56,6 @@
                 {/if}
             </div>
         {/each}
+        -->
     </div>
 </nav>

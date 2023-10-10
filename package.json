@@ -23,6 +23,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
-		"sass": "^1.68.0"
+		"sass": "^1.68.0",
+		"ts-import": "^5.0.0-beta.0"
 	}
 }
