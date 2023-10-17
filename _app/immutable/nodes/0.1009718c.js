@@ -1,8 +1,8 @@
 import { _ } from "../chunks/_layout.4fab37f4.js";
 import { s as safe_not_equal, n as noop, c as component_subscribe, d as create_slot, u as update_slot_base, g as get_all_dirty_from_scope, e as get_slot_changes } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, h as claim_element, x as get_svelte_dataset, k as attr, a as insert_hydration, f as detach, s as space, r as create_component, y as head_selector, c as claim_space, u as claim_component, z as append_hydration, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.79817a2c.js";
-import { p as page } from "../chunks/stores.3bc99068.js";
-import { b as base } from "../chunks/paths.3a89d34e.js";
+import { p as page } from "../chunks/stores.f1dfd097.js";
+import { b as base } from "../chunks/paths.d4863820.js";
 const Navbar_svelte_svelte_type_style_lang = "";
 function create_fragment$1(ctx) {
   let nav;

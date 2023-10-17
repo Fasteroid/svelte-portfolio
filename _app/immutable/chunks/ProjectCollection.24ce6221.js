@@ -1,7 +1,7 @@
 import { s as safe_not_equal, c as component_subscribe } from "./scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, r as create_component, s as space, h as claim_element, j as children, u as claim_component, c as claim_space, x as get_svelte_dataset, f as detach, k as attr, a as insert_hydration, z as append_hydration, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "./index.79817a2c.js";
-import { p as page } from "./stores.3bc99068.js";
-import { b as base } from "./paths.3a89d34e.js";
+import { p as page } from "./stores.f1dfd097.js";
+import { b as base } from "./paths.d4863820.js";
 import { B as BackgroundTitle } from "./BackgroundTitle.c9afbb16.js";
 const ProjectCollection_svelte_svelte_type_style_lang = "";
 function create_fragment(ctx) {
