@@ -1,1 +1,0 @@
-let e="Fast's Code Creations";function t(){return{titlePath:[e],title:e}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:t,prerender:!0},Symbol.toStringTag,{value:"Module"}));export{r as _,t as l};

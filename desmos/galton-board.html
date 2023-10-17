@@ -5,21 +5,19 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link rel="modulepreload" href="../_app/immutable/entry/start.819a9834.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.2cdf953d.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.18342aed.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.9c186df2.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.5874cfe6.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.a4192956.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.65d7753f.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.73ec3ef0.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.24c3be41.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/loader.e36884bf.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores.154508ea.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/2.78b0191f.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/7.1f193403.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.b748e252.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/datacomposer.b3c25c4c.js"><title> Fast's Code Creations | Desmos | Galton Board </title><!-- HEAD_svelte-10yebmf_START --><style lang="scss" data-svelte-h="svelte-16evmz4">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
+		<link href="../_app/immutable/assets/0.c51d2fd7.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.76c568d9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.e97e8672.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.a386bfb6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.3a89d34e.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.77d33c54.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.79817a2c.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.2cbfeb5b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.4fab37f4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.3bc99068.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.d1caccef.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.a9259033.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/pagedata.f846d81a.js"><title> Fast's Code Creations | Desmos | Galton Board </title><!-- HEAD_svelte-1xvmj29_START --><style lang="scss" data-svelte-h="svelte-ptnhna">@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 body, html {
   margin: 0;
   padding: 0;
@@ -58,6 +56,14 @@ hgroup h2 {
 hgroup h3 {
   font-weight: normal;
   font-size: 12pt;
+}
+
+section.no-background {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+section.extra-space {
+  margin: 15px 15px 15px 15px;
 }
 
 img {
@@ -107,351 +113,10 @@ span.emdash {
   text-align: center;
   width: 13pt;
   transform: scale(1.7, 1);
-}</style><!-- HEAD_svelte-10yebmf_END --><!-- HEAD_svelte-ztl8tf_START --><style lang="scss" data-svelte-h="svelte-1bfx4ye">@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
-@keyframes neon-cyan-flickering {
-  0%, 60%, 62%, 98%, 100% {
-    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
-  }
-  61%, 99% {
-    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
-  }
-}
-@font-face {
-  font-family: minecraft_dev;
-  src: url("/test/assets/fonts/minecraft.woff") format("woff");
-}
-@font-face {
-  font-family: minecraft_prod;
-  src: url("/svelte-portfolio/assets/fonts/minecraft.woff") format("woff");
-}
-.minecraftsplash {
-  color: #ff0;
-  position: absolute;
-  z-index: 1;
-  left: 100%;
-  font-family: "minecraft_prod", "minecraft_dev", "fixedsys";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 11pt;
-  text-align: center;
-  white-space: pre;
-  -webkit-font-smoothing: none;
-  animation: minecraftwow 0.5s infinite;
-}
-
-@keyframes minecraftwow {
-  0% {
-    transform: translate(calc(-60% + 0.6px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
-    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
-  }
-  50% {
-    transform: translate(calc(-60% + 0.6px), calc(60% - 0.6px)) scale(1) rotate(-15deg);
-    animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
-  }
-  100% {
-    transform: translate(calc(-60% + 0.6px), calc(60% - 0.6px)) scale(0.95) rotate(-15deg);
-    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
-  }
-}
-nav {
-  display: flex;
-  background: #000000;
-  font-family: "Recursive", sans-serif;
-  font-style: italic;
-  position: sticky;
-  top: 0;
-  justify-content: space-between;
-  z-index: 999; /* thank god this actually works for once */
-  /* This is literal magic, it cancels out the transitions that (incorrectly) trigger on page load. */
-  /* Glow animation stuff */
-}
-nav .pages {
-  z-index: 0; /* fixes the minecraft splash */
-}
-nav .home {
-  z-index: 1;
-}
-nav .home .home-wrapper {
-  width: max-content;
-  margin: auto;
-  padding: 15px;
-  font-size: 16pt;
-  color: #ffffff;
-  background: #000000;
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr;
-}
-nav .home .home-wrapper * {
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-nav .home .home-wrapper span {
-  animation: neon-cyan-flickering 1s ease-in-out alternate infinite;
-}
-nav .dropdown {
-  position: relative;
-  cursor: pointer;
-  background: #000000;
-}
-@keyframes stopTransitionOnLoad {
-  from {
-    transform: translate(0, -100%);
-  }
-  to {
-    transform: translate(0, 0);
-  }
-}
-nav .dropdown-onload-wrapper {
-  animation: stopTransitionOnLoad 0.3s;
-}
-nav .dropdown-content, nav .dropdown-onload-wrapper {
-  z-index: 0;
-  display: block;
-  left: 0;
-  top: 90%;
-  width: 100%;
-}
-nav .dropdown-content {
-  box-shadow: 0px 0px 0px black;
-  position: absolute;
-  transform: translate(0, -100%);
-  transition: 0.3s;
-}
-nav .dropdown-head {
-  z-index: 1;
-  display: flex;
-  background: #000000;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  top: 90%;
-  padding: 0 15px;
-}
-nav .pages > a {
-  padding: 0 15px;
-}
-nav .dropdown-content a {
-  background: #000000;
-  padding: 15px;
-  filter: none;
-  mix-blend-mode: screen; /* Needed so the glows from the icons merge additively */
-}
-nav .dropdown-content a span {
-  filter: none;
-}
-nav .dropdown-content .icon {
-  mix-blend-mode: screen; /* Needed so the glows from the icons merge additively */
-}
-nav .dropdown,
-nav .dropdown-content a,
-nav .pages > a {
-  font-size: 14pt;
-}
-nav .dropdown,
-nav .dropdown-content a,
-nav .dropdown-head a,
-nav .pages > a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  color: #ffffff;
-  text-decoration: none;
-}
-nav .dropdown-content a {
-  font-size: 12pt;
-}
-nav .active {
-  background: rgb(34, 34, 34) !important;
-}
-nav .icon {
-  background-color: rgba(0, 0, 0, 0);
-  padding: 0;
-  margin: 0px 10px 0px 0px;
-  display: inline;
-  max-height: 24px;
-}
-nav .dropdown > a {
-  text-decoration: none;
-}
-nav .dropdown:hover .dropdown-content {
-  transform: translate(0, 5px) translateZ(-1px);
-  box-shadow: 0px 0px 5px black;
-}
-nav .dropdown:hover > a > span,
-nav .dropdown:hover > .dropdown-head > a {
-  filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
-}
-nav .dropdown a:hover * { /* these looked obnoxious with the full glow */
-  filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
-}
-nav a span,
-nav .dropdown > a > span,
-nav .dropdown > .dropdown-head > a,
-nav .dropdown a * {
-  mix-blend-mode: screen;
-  transition: translate, filter 0.1s cubic-bezier(0.69, 0.02, 0.95, 0.6);
-  color: #ffffff;
-}
-nav a:hover span,
-nav .dropdown:hover > a > span,
-nav .dropdown:hover > .dropdown-head > a,
-nav .dropdown a:hover * {
-  mix-blend-mode: screen;
-  transition: translate, filter 0.2s cubic-bezier(0.05, 0.4, 0.22, 1) !important;
-  color: #ffffff;
-}
-@media screen and (orientation: portrait) {
-  nav {
-    display: flex;
-    flex-flow: column;
-  }
-  nav .home {
-    background-color: #000000;
-    text-align: center;
-    width: calc(100% - 30px);
-  }
-  nav .pages {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-  nav .dropdown-head {
-    width: 100%;
-    padding: 15px;
-    /* 
-        in my testing, these looked good when scaled relative to view height on mobile
-        we can't let them grow too much though, or they spill out of their containers!
-    */
-    font-size: min(max(1.3vh, 14pt), 24pt);
-  }
-  nav .dropdown {
-    /* note: must be changed if I add more dropdowns! */
-    width: 25%;
-  }
-  nav .dropdown,
-  nav .dropdown-content a,
-  nav .pages > a {
-    font-size: min(max(1.2vh, 12pt), 24pt);
-  }
-}
-@media screen and (orientation: landscape) {
-  nav .pages {
-    margin-left: auto;
-    margin-right: 0px;
-    display: flex;
-    align-items: center;
-  }
-  nav .dropdown-head {
-    width: 80pt;
-  }
-}</style><!-- HEAD_svelte-ztl8tf_END --><!-- HEAD_svelte-139g6il_START --><style lang="scss" data-svelte-h="svelte-driaws">@keyframes neon-cyan-flickering {
-  0%, 60%, 62%, 98%, 100% {
-    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
-  }
-  61%, 99% {
-    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
-  }
-}
-.headerimage-border {
-  margin: 15px 15px;
-  padding: 15px 15px;
-  max-width: calc(100% - 60px);
-}
-.headerimage-border .headerimage {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-size: cover;
-  min-height: 200px;
-  max-height: 3in;
-  height: 20vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.headerimage-border .headerimage hgroup {
-  background: rgba(132, 136, 138, 0.5333333333);
-  display: block;
-  position: relative;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: -30px;
-  margin-right: -30px;
-  padding: 20px 0;
-  filter: drop-shadow(0 0 4px #000000);
-  font-size: max(24px, 1.8vh);
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-section.no-background {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-section.extra-space, hgroup {
-  margin: 15px 15px 15px 15px;
-}
-
-.project-shelf {
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-.project-shelf > a {
-  color: #eeeeee;
-  display: inline-block;
-  position: relative;
-  max-width: 20vh;
-  font-size: max(11pt, 2vw - 60px);
-  margin: 2.5px;
-  line-height: 130%;
-}
-.project-shelf > a:hover > img {
-  filter: drop-shadow(0 0 6pt rgba(255, 255, 255, 0.3333333333)) drop-shadow(0 0 3pt rgba(255, 255, 255, 0.8)) drop-shadow(0 0 1pt white);
-  min-width: calc(100% + min(20px, 10%));
-  margin: max(-10px, -5%);
-}
-.project-shelf img {
-  position: relative;
-  min-width: 100%;
-  border: none;
-  background: none;
-  box-sizing: border-box;
-  margin: 0;
-  transition-timing-function: linear;
-  transition: 0.4s;
-}
-
-@keyframes neon-cyan-flickering {
-  0%, 60%, 62%, 98%, 100% {
-    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.6666666667)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.6666666667)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.6666666667)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.6666666667)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.6666666667));
-  }
-  61%, 99% {
-    filter: drop-shadow(0 0 1pt rgba(255, 255, 255, 0.5333333333)) drop-shadow(0 0 3pt rgba(102, 255, 255, 0.5333333333)) drop-shadow(0 1px 7pt rgba(0, 153, 255, 0.5333333333)) drop-shadow(0 1px 5pt rgba(0, 0, 255, 0.5333333333)) drop-shadow(0 1px 8pt rgba(0, 0, 255, 0.5333333333));
-  }
-}
-.project-shelf img {
-  padding: 5px;
-}
-
-.shortcut-title {
-  position: absolute;
-  bottom: 10%;
-  width: 90%;
-  text-align: center;
-  transform: translate(5%, 0);
-  color: #000;
-  text-shadow: -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, 0 0 0.5px #000, 0 0 0.5px #000;
-}</style><!-- HEAD_svelte-139g6il_END -->
+}</style><!-- HEAD_svelte-1xvmj29_END -->
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">    <nav><div class="home" data-svelte-h="svelte-1s6thel"><div class="home-wrapper"><span>FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash">Now with Svelte!</div></div></div> <div class="pages"><div class="dropdown" data-svelte-h="svelte-1tp0efu"><div class="dropdown-head"><span>Links</span></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="https://discord.com/users/276913653230469122/" target="_blank"><img src="/svelte-portfolio/assets/icons/discord.svg" class="icon" alt=""> <span>Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank"><img src="/svelte-portfolio/assets/icons/github.svg" class="icon" alt=""> <span>Github</span></a></div></div></div> <div class="dropdown"><div class="dropdown-head"><a href="/svelte-portfolio/about">About</a></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"></div> </div> </div><div class="dropdown"><div class="dropdown-head active"><a href="/svelte-portfolio/desmos">Desmos</a></div> <div class="dropdown-content"><div class="dropdown-onload-wrapper"><a href="/svelte-portfolio/desmos/double-tangents"><span>Double Tangents</span> </a><a href="/svelte-portfolio/desmos/galton-board" class="active"><span>Galton Board</span> </a><a href="/svelte-portfolio/desmos/nearby-points"><span>Nearby Points</span> </a><a href="/svelte-portfolio/desmos/portals"><span>Portals</span> </a></div> </div> </div></div></nav>  <div class="margins" data-svelte-h="svelte-zxnydz"><section><hgroup><h2>Galton Board</h2> <h3>Does that curve ring any <i>bells?</i></h3></hgroup> <section class="extra-space"><iframe src="https://www.desmos.com/calculator/q0zasmg9jo" style="width: 100%; height: 50vh" frameborder="0" title="graph"></iframe></section> <section class="extra-space"><iframe style="float:right; max-width: 100%; width: 400px; height: 400px; margin: 0px 0px 15px 15px" src="https://www.youtube-nocookie.com/embed/Kq7e6cj2nDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"></iframe>
+	<body>
+		<div style="display: contents">   <nav class="svelte-1d95zvm" data-svelte-h="svelte-dqy8x"><div class="home svelte-1d95zvm"><div class="home-wrapper svelte-1d95zvm"><span class="svelte-1d95zvm">FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash svelte-1d95zvm">Now with Svelte!</div></div></div> <div class="pages svelte-1d95zvm"><div class="dropdown svelte-1d95zvm"><div class="dropdown-head svelte-1d95zvm"><span class="svelte-1d95zvm">Links</span></div> <div class="dropdown-content svelte-1d95zvm"><div class="dropdown-onload-wrapper svelte-1d95zvm"><a href="https://discord.com/users/276913653230469122/" target="_blank" class="svelte-1d95zvm"><img src="/svelte-portfolio/assets/icons/discord.svg" class="icon svelte-1d95zvm" alt=""> <span class="svelte-1d95zvm">Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank" class="svelte-1d95zvm"><img src="/svelte-portfolio/assets/icons/github.svg" class="icon svelte-1d95zvm" alt=""> <span class="svelte-1d95zvm">Github</span></a></div></div></div> </div></nav> <div class="margins" data-svelte-h="svelte-zxnydz"><section><hgroup><h2>Galton Board</h2> <h3>Does that curve ring any <i>bells?</i></h3></hgroup> <section class="extra-space"><iframe src="https://www.desmos.com/calculator/q0zasmg9jo" style="width: 100%; height: 50vh" frameborder="0" title="graph"></iframe></section> <section class="extra-space"><iframe style="float:right; max-width: 100%; width: 400px; height: 400px; margin: 0px 0px 15px 15px" src="https://www.youtube-nocookie.com/embed/Kq7e6cj2nDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"></iframe>
             Predictability arising from randomness?  What is this, did I somehow reverse-engineer Desmos&#39;s RNG, or is this real?<br> <br>
             While reverse-engineering RNG would have been really cool, no, I didn&#39;t have to do that for this graph—all I needed was statistics.  
             Just like the physical variant shown to the right, this digital Galton board (also called a quincunx or bean-machine) demonstrates 
@@ -470,7 +135,7 @@ section.extra-space, hgroup {
 			
 			<script>
 				{
-					__sveltekit_1yd9ri4 = {
+					__sveltekit_11glb13 = {
 						assets: "/svelte-portfolio",
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
@@ -478,14 +143,14 @@ section.extra-space, hgroup {
 
 					const element = document.currentScript.parentElement;
 
-					const data = [null,null,null];
+					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.819a9834.js"),
-						import("../_app/immutable/entry/app.5874cfe6.js")
+						import("../_app/immutable/entry/start.76c568d9.js"),
+						import("../_app/immutable/entry/app.77d33c54.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 7],
+							node_ids: [0, 6],
 							data,
 							form: null,
 							error: null
