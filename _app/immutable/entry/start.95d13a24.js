@@ -1,6 +1,6 @@
 import { o as onMount, t as tick } from "../chunks/scheduler.e97e8672.js";
-import { S as SCROLL_KEY, a as SNAPSHOT_KEY, I as INDEX_KEY, g as get_base_uri, f as find_anchor, b as get_link_info, c as get_router_options, s as scroll_state, i as is_external_url, d as stores, P as PRELOAD_PRIORITIES, e as init } from "../chunks/singletons.925cf0d7.js";
-import { b as base } from "../chunks/paths.d4863820.js";
+import { S as SCROLL_KEY, a as SNAPSHOT_KEY, I as INDEX_KEY, g as get_base_uri, f as find_anchor, b as get_link_info, c as get_router_options, s as scroll_state, i as is_external_url, d as stores, P as PRELOAD_PRIORITIES, e as init } from "../chunks/singletons.55081b00.js";
+import { b as base } from "../chunks/paths.9f840d21.js";
 function normalize_path(path, trailing_slash) {
   if (path === "/" || trailing_slash === "ignore")
     return path;
@@ -98,7 +98,7 @@ function initial_fetch(resource, opts) {
       cache.set(selector, { body, init: init2, ttl: 1e3 * Number(ttl) });
     return Promise.resolve(new Response(body, init2));
   }
-  return native_fetch(resource, opts);
+  return window.fetch(resource, opts);
 }
 function subsequent_fetch(resource, resolved, opts) {
   if (cache.size > 0) {
@@ -111,7 +111,7 @@ function subsequent_fetch(resource, resolved, opts) {
       cache.delete(selector);
     }
   }
-  return native_fetch(resolved, opts);
+  return window.fetch(resolved, opts);
 }
 function build_selector(resource, opts) {
   const url = JSON.stringify(resource instanceof Request ? resource.url : resource);
@@ -515,7 +515,7 @@ function create_client(app, target) {
       return;
     if (navigation_result) {
       if (navigation_result.type === "redirect") {
-        return goto(new URL(navigation_result.location, url).href, {}, [url.pathname], nav_token);
+        return goto(new URL(navigation_result.location, url).href, {}, 1, nav_token);
       } else {
         if (navigation_result.props.page !== void 0) {
           page = navigation_result.props.page;
@@ -546,7 +546,7 @@ function create_client(app, target) {
     keepFocus = false,
     state = {},
     invalidateAll = false
-  }, redirect_chain, nav_token) {
+  }, redirect_count, nav_token) {
     if (typeof url === "string") {
       url = new URL(url, get_base_uri(document));
     }
@@ -554,7 +554,7 @@ function create_client(app, target) {
       url,
       scroll: noScroll ? scroll_state() : null,
       keepfocus: keepFocus,
-      redirect_chain,
+      redirect_count,
       details: {
         state,
         replaceState
@@ -1048,7 +1048,7 @@ function create_client(app, target) {
     url,
     scroll: scroll2,
     keepfocus,
-    redirect_chain,
+    redirect_count,
     details,
     type,
     delta,
@@ -1091,7 +1091,7 @@ function create_client(app, target) {
       return false;
     }
     if (navigation_result.type === "redirect") {
-      if (redirect_chain.length > 10 || redirect_chain.includes(url.pathname)) {
+      if (redirect_count >= 20) {
         navigation_result = await load_root_error_page({
           status: 500,
           error: await handle_error(new Error("Redirect loop"), {
@@ -1103,12 +1103,7 @@ function create_client(app, target) {
           route: { id: null }
         });
       } else {
-        goto(
-          new URL(navigation_result.location, url).href,
-          {},
-          [...redirect_chain, url.pathname],
-          nav_token
-        );
+        goto(new URL(navigation_result.location, url).href, {}, redirect_count + 1, nav_token);
         return false;
       }
     } else if (
@@ -1353,7 +1348,7 @@ function create_client(app, target) {
       }
     },
     goto: (href, opts = {}) => {
-      return goto(href, opts, []);
+      return goto(href, opts, 0);
     },
     invalidate: (resource) => {
       if (typeof resource === "function") {
@@ -1402,7 +1397,7 @@ function create_client(app, target) {
           tick().then(reset_focus);
         }
       } else if (result.type === "redirect") {
-        goto(result.location, { invalidateAll: true }, []);
+        goto(result.location, { invalidateAll: true }, 0);
       } else {
         root.$set({
           // this brings Svelte's view of the world in line with SvelteKit's
@@ -1504,7 +1499,7 @@ function create_client(app, target) {
           url,
           scroll: options.noscroll ? scroll_state() : null,
           keepfocus: options.keep_focus ?? false,
-          redirect_chain: [],
+          redirect_count: 0,
           details: {
             state: {},
             replaceState: options.replace_state ?? url.href === location.href
@@ -1552,7 +1547,7 @@ function create_client(app, target) {
           url,
           scroll: noscroll ? scroll_state() : null,
           keepfocus: keep_focus ?? false,
-          redirect_chain: [],
+          redirect_count: 0,
           details: {
             state: {},
             replaceState: replace_state ?? url.href === location.href
@@ -1584,7 +1579,7 @@ function create_client(app, target) {
             url,
             scroll: scroll2,
             keepfocus: false,
-            redirect_chain: [],
+            redirect_count: 0,
             details: null,
             accepted: () => {
               current_history_index = event.state[INDEX_KEY];

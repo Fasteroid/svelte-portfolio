@@ -1,7 +1,7 @@
 import { _ } from "../chunks/_page.64553d50.js";
 import { s as safe_not_equal, n as noop } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, r as create_component, u as claim_component, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.79817a2c.js";
-import { P as ProjectCollection } from "../chunks/ProjectCollection.24ce6221.js";
+import { P as ProjectCollection } from "../chunks/ProjectCollection.ee8ded2f.js";
 function create_fragment(ctx) {
   let projectcollection;
   let current;
