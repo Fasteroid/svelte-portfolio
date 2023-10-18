@@ -1,17 +1,29 @@
 import adapter from '@sveltejs/adapter-static';
-import { load, LoadMode } from 'ts-import'
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('svelte/compiler').PreprocessorGroup[]} */
-const tsPreprocessors = (await load('./src/building/preprocessors.ts',{
-	mode: LoadMode.Compile,
-	compiledJsExtension: ".js",
-	useCache: false
-})).preprocessors
+const preprocessors = [
+	
+	/* doublespace.js */ {
+		markup({content, filename}) {
+			if( filename.match(/\/routes\/.*?\+.*?\.svelte/) && content.match(/<body>/) ){
+				content = content.replaceAll('.  ','.&nbsp; ');
+				content = content.replaceAll('!  ','!&nbsp; ');
+				content = content.replaceAll('?  ','?&nbsp; ');
+				content = content.replaceAll('—','<span class="emdash">—</span>');
+				return { code: content }
+			}
+		}
+	},
+
+	/* svelte-preprocess */
+	preprocess()
+	
+]
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: tsPreprocessors.concat( preprocess() ),
+	preprocess: preprocessors,
 	kit: {
 		adapter: adapter({
 			pages:  'build',

@@ -1,7 +1,6 @@
 
 import * as fs from 'fs'
-import { load } from 'ts-import'
-
+import * as path from 'path'
 import { TreeNode } from '../lib/treelib';
 import type { FullPageData } from '../lib/pagedata';
 
@@ -13,20 +12,19 @@ function toDir(p: string): string {
 }
 
 function toModule(p: string): string {
-    return `./src${p}`
+    return `./../../src${p}`
 }
 
 const fileHandlers: {[key: string]: TreeFileHandler | undefined} = {
 
     ["+page.ts"]: async (file, node) => {
         const importPath = toModule(`${node.path}/${file.name}`)
-        console.log(importPath)
         let options: PageOptions;
         try {
-            options = await load( /* @vite-ignore */ importPath);
+            options = await import( /* @vite-ignore */ importPath);
         }
         catch(e){
-            console.warn("bad auto-import: " + importPath + "\n\n" + e)
+            console.warn("bad auto-import: " + importPath + "\n" + e + "\n\n")
             return;
         }
         const data: FullPageData = options.load();
@@ -53,7 +51,6 @@ async function buildPageTree(node: TreeNode = new TreeNode("","")){
 }
 
 const tree = await buildPageTree();
-const what = JSON.stringify(tree)
-//const whar = JSON.parse(what, (k, v) => {console.log(k, v)})
+const output = JSON.stringify(tree)
 
-export let wtf = 1;
+fs.writeFileSync("./src/lib/pagetree.json", output)

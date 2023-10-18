@@ -3,6 +3,7 @@ node_modules
 /build
 /.svelte-kit
 /.cache
+/_npx
 /package
 .env
 .env.*
@@ -10,3 +11,4 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .cache/*
+src/lib/pagetree.json
