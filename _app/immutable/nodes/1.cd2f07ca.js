@@ -1,7 +1,7 @@
 import { s as safe_not_equal, n as noop, c as component_subscribe } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, s as space, m as text, B as head_selector, h as claim_element, x as get_svelte_dataset, f as detach, c as claim_space, j as children, n as claim_text, k as attr, y as append_hydration, a as insert_hydration, o as set_data } from "../chunks/index.050cbb3d.js";
-import { b as base } from "../chunks/paths.f22af803.js";
-import { p as page } from "../chunks/stores.118198d1.js";
+import { b as base } from "../chunks/paths.67dd4984.js";
+import { p as page } from "../chunks/stores.866f2904.js";
 function create_fragment(ctx) {
   let style;
   let textContent = ".error-centerer {\n  display: flex;\n  flex-flow: column;\n}\n.error-centerer img {\n  margin: auto;\n  width: 50%;\n}";

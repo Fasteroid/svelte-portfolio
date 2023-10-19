@@ -2,7 +2,7 @@ import { l as load$1 } from "../chunks/_page.64553d50.js";
 import { d as defineData } from "../chunks/pagedata.f846d81a.js";
 import { s as safe_not_equal, n as noop, b as binding_callbacks } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, s as space, B as head_selector, h as claim_element, x as get_svelte_dataset, f as detach, c as claim_space, k as attr, y as append_hydration, a as insert_hydration, r as create_component, j as children, u as claim_component, l as set_style, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.050cbb3d.js";
-import { b as base } from "../chunks/paths.f22af803.js";
+import { b as base } from "../chunks/paths.67dd4984.js";
 import { B as BackgroundTitle } from "../chunks/BackgroundTitle.347c0d56.js";
 const load = defineData(load$1, {
   title: "Plate Cutter",
