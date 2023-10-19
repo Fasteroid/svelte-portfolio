@@ -21,7 +21,7 @@ const fileHandlers: {[key: string]: TreeFileHandler | undefined} = {
         const importPath = toModule(`${node.path}/${file.name}`)
         let options: PageOptions;
         try {
-            options = await import( /* @vite-ignore */ importPath);
+            options = await import(importPath);
         }
         catch(e){
             console.warn("bad auto-import: " + importPath + "\n" + e + "\n\n")
@@ -50,7 +50,9 @@ async function buildPageTree(node: TreeNode = new TreeNode("","")){
     return node;
 }
 
-const tree = await buildPageTree();
-const output = JSON.stringify(tree)
-
+let start = performance.now()
+const tree = await buildPageTree( new TreeNode("/routes","") );
+const output = JSON.stringify(tree,undefined,4)
 fs.writeFileSync("./src/lib/pagetree.json", output)
+
+console.log(`  treebuilder.ts: Created pagetree.json in ${Math.floor(performance.now() - start)} ms`)

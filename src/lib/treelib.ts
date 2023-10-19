@@ -1,10 +1,24 @@
 import type { FullPageData } from "./pagedata";
 
-export class TreeNode {
-    private _children?:  {[key: string]: TreeNode}
+interface TreeNodeData {
+    children?:  {[key: string]: TreeNodeData}
+    path:       string;
+    key:        string;
+    pageData?:   FullPageData;
+}
+
+export class TreeNode implements TreeNodeData {
+
+    static webBase: string = "";
+
+    children?:  {[key: string]: TreeNode}
     path:       string;
     key:        string;
     pageData!:  FullPageData;
+
+    public get webPath(): string {
+        return TreeNode.webBase + this.path.replace("/routes","");
+    }
 
     constructor(path: string, key: string){
         this.path = path;
@@ -12,13 +26,13 @@ export class TreeNode {
     }
 
     getChild(key: string): TreeNode {
-        if( !this._children ) this._children = {};
-        if( !this._children[key] ) this._children[key] = new TreeNode(`${this.path}/${key}`, key)
-        return this._children[key];
+        if( !this.children ) this.children = {};
+        if( !this.children[key] ) this.children[key] = new TreeNode(`${this.path}/${key}`, key)
+        return this.children[key];
     }
 
     getChildren(): TreeNode[] {
-        return Object.values( this._children || {} )
+        return Object.values( this.children || {} )
     }
 
     getChildrenAtPath(path: string): TreeNode[] {
@@ -26,10 +40,27 @@ export class TreeNode {
         let destination: TreeNode = this;
         for( let link of chain ){
             if( link.length < 1 ){ throw "bad getPathChildren; malformed." }
-            if( !destination._children ){ throw `bad getPathChildren; ${destination.path} has no children.` }
-            if( !destination._children[link] ){ throw `bad getPathChildren; ${destination.path} does not have ${link}.` }
-            destination = destination._children[link];
+            if( !destination.children ){ throw `bad getPathChildren; ${destination.path} has no children.` }
+            if( !destination.children[link] ){ throw `bad getPathChildren; ${destination.path} does not have ${link}.` }
+            destination = destination.children[link];
         }
         return destination.getChildren()
     }
+
+    static fromJSON(json: TreeNodeData): TreeNode {
+        const obj = new TreeNode(json.path, json.key)
+        if( json.pageData ) obj.pageData = json.pageData;
+        if( json.children ) {
+            obj.children = { }
+            for( let [key, node] of Object.entries(json.children) ){
+                obj.children[key] = TreeNode.fromJSON(node);
+            }
+        }
+        return obj
+    }
+
+    static setWebBase(base: string){
+        TreeNode.webBase = base
+    }
+
 }

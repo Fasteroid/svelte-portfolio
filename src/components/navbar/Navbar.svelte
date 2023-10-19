@@ -1,6 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { base } from "$app/paths";
+    import { pagetree } from '$lib/pagetree';
         
     const currentPage = $page.url.pathname;
     function isActive(page: string): boolean {
@@ -37,7 +38,6 @@
                 </div>
             </div>
         </div>
-        <!--
         {#each pagetree.getChildren() as main}
             <div class="dropdown">
                 <div class:dropdown-head={true} class:active={isActive(main.webPath)}>
@@ -56,6 +56,5 @@
                 {/if}
             </div>
         {/each}
-        -->
     </div>
 </nav>
