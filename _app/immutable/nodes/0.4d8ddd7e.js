@@ -1,183 +1,9 @@
 import { _ } from "../chunks/_layout.4fab37f4.js";
 import { s as safe_not_equal, n as noop, c as component_subscribe, d as create_slot, u as update_slot_base, g as get_all_dirty_from_scope, e as get_slot_changes } from "../chunks/scheduler.e97e8672.js";
-import { S as SvelteComponent, i as init, g as element, s as space, h as claim_element, j as children$1, x as get_svelte_dataset, c as claim_space, f as detach, k as attr, a as insert_hydration, y as append_hydration, z as destroy_each, m as text, n as claim_text, A as toggle_class, r as create_component, B as head_selector, u as claim_component, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.050cbb3d.js";
-import { p as page } from "../chunks/stores.13bb828a.js";
-import { b as base } from "../chunks/paths.959862a9.js";
-function ensure_array_like(array_like_or_iterator) {
-  return array_like_or_iterator?.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
-}
-const children = {
-  about: {
-    path: "/routes/about",
-    key: "about",
-    pageData: {
-      titlePath: [
-        "Fast's Code Creations",
-        "About"
-      ],
-      title: "About"
-    }
-  },
-  desmos: {
-    children: {
-      "double-tangents": {
-        path: "/routes/desmos/double-tangents",
-        key: "double-tangents",
-        pageData: {
-          titlePath: [
-            "Fast's Code Creations",
-            "Desmos",
-            "Double Tangents"
-          ],
-          title: "Double Tangents",
-          thumbnail: "doubletangents.png"
-        }
-      },
-      "galton-board": {
-        path: "/routes/desmos/galton-board",
-        key: "galton-board",
-        pageData: {
-          titlePath: [
-            "Fast's Code Creations",
-            "Desmos",
-            "Galton Board"
-          ],
-          title: "Galton Board",
-          thumbnail: "galtonboard.png"
-        }
-      },
-      "nearby-points": {
-        path: "/routes/desmos/nearby-points",
-        key: "nearby-points",
-        pageData: {
-          titlePath: [
-            "Fast's Code Creations",
-            "Desmos",
-            "Nearby Points"
-          ],
-          title: "Nearby Points",
-          thumbnail: "integralabuse.png"
-        }
-      },
-      portals: {
-        path: "/routes/desmos/portals",
-        key: "portals",
-        pageData: {
-          titlePath: [
-            "Fast's Code Creations",
-            "Desmos",
-            "Portals"
-          ],
-          title: "Portals",
-          thumbnail: "portals.png"
-        }
-      }
-    },
-    path: "/routes/desmos",
-    key: "desmos",
-    pageData: {
-      titlePath: [
-        "Fast's Code Creations",
-        "Desmos"
-      ],
-      title: "Desmos"
-    }
-  },
-  expression2: {
-    children: {
-      "plate-cutter": {
-        path: "/routes/expression2/plate-cutter",
-        key: "plate-cutter",
-        pageData: {
-          titlePath: [
-            "Fast's Code Creations",
-            "E2 Stuff",
-            "Plate Cutter"
-          ],
-          title: "Plate Cutter",
-          longTitle: "Expression 2",
-          thumbnail: "platecutter.png"
-        }
-      }
-    },
-    path: "/routes/expression2",
-    key: "expression2",
-    pageData: {
-      titlePath: [
-        "Fast's Code Creations",
-        "E2 Stuff"
-      ],
-      title: "E2 Stuff",
-      longTitle: "Expression 2"
-    }
-  }
-};
-const path = "/routes";
-const key = "";
-const data = {
-  children,
-  path,
-  key
-};
-class TreeNode {
-  static webBase = "";
-  children;
-  path;
-  key;
-  pageData;
-  get webPath() {
-    return TreeNode.webBase + this.path.replace("/routes", "");
-  }
-  constructor(path2, key2) {
-    this.path = path2;
-    this.key = key2;
-  }
-  getChild(key2) {
-    if (!this.children)
-      this.children = {};
-    if (!this.children[key2])
-      this.children[key2] = new TreeNode(`${this.path}/${key2}`, key2);
-    return this.children[key2];
-  }
-  getChildren() {
-    return Object.values(this.children || {});
-  }
-  getChildrenAtPath(path2) {
-    let chain = path2.split("/").slice(1);
-    let destination = this;
-    for (let link of chain) {
-      if (link.length < 1) {
-        throw "bad getPathChildren; malformed.";
-      }
-      if (!destination.children) {
-        throw `bad getPathChildren; ${destination.path} has no children.`;
-      }
-      if (!destination.children[link]) {
-        throw `bad getPathChildren; ${destination.path} does not have ${link}.`;
-      }
-      destination = destination.children[link];
-    }
-    return destination.getChildren();
-  }
-  static fromJSON(json) {
-    const obj = new TreeNode(json.path, json.key);
-    if (json.pageData)
-      obj.pageData = json.pageData;
-    if (json.children) {
-      obj.children = {};
-      for (let [key2, node] of Object.entries(json.children)) {
-        obj.children[key2] = TreeNode.fromJSON(node);
-      }
-    }
-    return obj;
-  }
-  static setWebBase(base2) {
-    TreeNode.webBase = base2;
-  }
-}
-TreeNode.setWebBase(base);
-const pagetree = TreeNode.fromJSON(data);
-console.log(pagetree);
+import { S as SvelteComponent, i as init, g as element, s as space, h as claim_element, j as children, x as get_svelte_dataset, c as claim_space, f as detach, k as attr, a as insert_hydration, y as append_hydration, z as destroy_each, m as text, n as claim_text, A as toggle_class, r as create_component, B as head_selector, u as claim_component, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.050cbb3d.js";
+import { e as ensure_array_like, p as pagetree } from "../chunks/pagetree.22d7899a.js";
+import { p as page } from "../chunks/stores.775cec0b.js";
+import { b as base } from "../chunks/paths.e5d9a82c.js";
 const Navbar_svelte_svelte_type_style_lang = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -211,9 +37,9 @@ function create_if_block(ctx) {
     },
     l(nodes) {
       div1 = claim_element(nodes, "DIV", { class: true });
-      var div1_nodes = children$1(div1);
+      var div1_nodes = children(div1);
       div0 = claim_element(div1_nodes, "DIV", { class: true });
-      var div0_nodes = children$1(div0);
+      var div0_nodes = children(div0);
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].l(div0_nodes);
       }
@@ -222,8 +48,8 @@ function create_if_block(ctx) {
       this.h();
     },
     h() {
-      attr(div0, "class", "dropdown-onload-wrapper svelte-1d95zvm");
-      attr(div1, "class", "dropdown-content svelte-1d95zvm");
+      attr(div0, "class", "dropdown-onload-wrapper svelte-jgvsl1");
+      attr(div1, "class", "dropdown-content svelte-jgvsl1");
     },
     m(target, anchor) {
       insert_hydration(target, div1, anchor);
@@ -285,9 +111,9 @@ function create_each_block_1(ctx) {
     },
     l(nodes) {
       a = claim_element(nodes, "A", { href: true, class: true });
-      var a_nodes = children$1(a);
+      var a_nodes = children(a);
       span = claim_element(a_nodes, "SPAN", { class: true });
-      var span_nodes = children$1(span);
+      var span_nodes = children(span);
       t0 = claim_text(span_nodes, t0_value);
       span_nodes.forEach(detach);
       t1 = claim_space(a_nodes);
@@ -295,14 +121,14 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h() {
-      attr(span, "class", "svelte-1d95zvm");
+      attr(span, "class", "svelte-jgvsl1");
       attr(
         a,
         "href",
         /*sub*/
         ctx[6].webPath
       );
-      attr(a, "class", "svelte-1d95zvm");
+      attr(a, "class", "svelte-jgvsl1");
       toggle_class(
         a,
         "active",
@@ -355,11 +181,11 @@ function create_each_block(ctx) {
     },
     l(nodes) {
       div1 = claim_element(nodes, "DIV", { class: true });
-      var div1_nodes = children$1(div1);
+      var div1_nodes = children(div1);
       div0 = claim_element(div1_nodes, "DIV", { class: true });
-      var div0_nodes = children$1(div0);
+      var div0_nodes = children(div0);
       a = claim_element(div0_nodes, "A", { href: true, class: true });
-      var a_nodes = children$1(a);
+      var a_nodes = children(a);
       t0 = claim_text(a_nodes, t0_value);
       a_nodes.forEach(detach);
       div0_nodes.forEach(detach);
@@ -377,8 +203,8 @@ function create_each_block(ctx) {
         /*main*/
         ctx[3].webPath
       );
-      attr(a, "class", "svelte-1d95zvm");
-      attr(div0, "class", "svelte-1d95zvm");
+      attr(a, "class", "svelte-jgvsl1");
+      attr(div0, "class", "svelte-jgvsl1");
       toggle_class(div0, "dropdown-head", true);
       toggle_class(
         div0,
@@ -389,7 +215,7 @@ function create_each_block(ctx) {
           ctx[3].webPath
         )
       );
-      attr(div1, "class", "dropdown svelte-1d95zvm");
+      attr(div1, "class", "dropdown svelte-jgvsl1");
     },
     m(target, anchor) {
       insert_hydration(target, div1, anchor);
@@ -417,11 +243,11 @@ function create_each_block(ctx) {
 function create_fragment$1(ctx) {
   let nav;
   let div2;
-  let textContent = `<div class="home-wrapper svelte-1d95zvm"><span class="svelte-1d95zvm">FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash svelte-1d95zvm">Now with Svelte!</div></div>`;
+  let textContent = `<div class="home-wrapper svelte-jgvsl1"><span class="svelte-jgvsl1">FAST&#39;S CODE CREATIONS</span> <div class="minecraftsplash svelte-jgvsl1">Now with Svelte!</div></div>`;
   let t3;
   let div7;
   let div6;
-  let textContent_1 = `<div class="dropdown-head svelte-1d95zvm"><span class="svelte-1d95zvm">Links</span></div> <div class="dropdown-content svelte-1d95zvm"><div class="dropdown-onload-wrapper svelte-1d95zvm"><a href="https://discord.com/users/276913653230469122/" target="_blank" class="svelte-1d95zvm"><img src="${base}/assets/icons/discord.svg" class="icon svelte-1d95zvm" alt=""/> <span class="svelte-1d95zvm">Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank" class="svelte-1d95zvm"><img src="${base}/assets/icons/github.svg" class="icon svelte-1d95zvm" alt=""/> <span class="svelte-1d95zvm">Github</span></a></div></div>`;
+  let textContent_1 = `<div class="dropdown-head svelte-jgvsl1"><span class="svelte-jgvsl1">Links</span></div> <div class="dropdown-content svelte-jgvsl1"><div class="dropdown-onload-wrapper svelte-jgvsl1"><a href="https://discord.com/users/276913653230469122/" target="_blank" class="svelte-jgvsl1"><img src="${base}/assets/icons/discord.svg" class="icon svelte-jgvsl1" alt=""/> <span class="svelte-jgvsl1">Discord</span></a> <a href="https://github.com/Fasteroid/" target="_blank" class="svelte-jgvsl1"><img src="${base}/assets/icons/github.svg" class="icon svelte-jgvsl1" alt=""/> <span class="svelte-jgvsl1">Github</span></a></div></div>`;
   let t11;
   let each_value = ensure_array_like(pagetree.getChildren());
   let each_blocks = [];
@@ -445,13 +271,13 @@ function create_fragment$1(ctx) {
     },
     l(nodes) {
       nav = claim_element(nodes, "NAV", { class: true });
-      var nav_nodes = children$1(nav);
+      var nav_nodes = children(nav);
       div2 = claim_element(nav_nodes, "DIV", { class: true, ["data-svelte-h"]: true });
       if (get_svelte_dataset(div2) !== "svelte-1s6thel")
         div2.innerHTML = textContent;
       t3 = claim_space(nav_nodes);
       div7 = claim_element(nav_nodes, "DIV", { class: true });
-      var div7_nodes = children$1(div7);
+      var div7_nodes = children(div7);
       div6 = claim_element(div7_nodes, "DIV", { class: true, ["data-svelte-h"]: true });
       if (get_svelte_dataset(div6) !== "svelte-1tp0efu")
         div6.innerHTML = textContent_1;
@@ -464,10 +290,10 @@ function create_fragment$1(ctx) {
       this.h();
     },
     h() {
-      attr(div2, "class", "home svelte-1d95zvm");
-      attr(div6, "class", "dropdown svelte-1d95zvm");
-      attr(div7, "class", "pages svelte-1d95zvm");
-      attr(nav, "class", "svelte-1d95zvm");
+      attr(div2, "class", "home svelte-jgvsl1");
+      attr(div6, "class", "dropdown svelte-jgvsl1");
+      attr(div7, "class", "pages svelte-jgvsl1");
+      attr(nav, "class", "svelte-jgvsl1");
     },
     m(target, anchor) {
       insert_hydration(target, nav, anchor);
