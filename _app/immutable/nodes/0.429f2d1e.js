@@ -1,9 +1,9 @@
 import { _ } from "../chunks/_layout.4fab37f4.js";
 import { s as safe_not_equal, n as noop, c as component_subscribe, d as create_slot, u as update_slot_base, g as get_all_dirty_from_scope, e as get_slot_changes } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, s as space, h as claim_element, j as children, x as get_svelte_dataset, c as claim_space, f as detach, k as attr, a as insert_hydration, y as append_hydration, z as destroy_each, m as text, n as claim_text, A as toggle_class, r as create_component, B as head_selector, u as claim_component, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.050cbb3d.js";
-import { e as ensure_array_like, p as pagetree } from "../chunks/pagetree.f4585da8.js";
-import { p as page } from "../chunks/stores.866f2904.js";
-import { b as base } from "../chunks/paths.67dd4984.js";
+import { e as ensure_array_like, p as pagetree } from "../chunks/pagetree.d2bd89fd.js";
+import { p as page } from "../chunks/stores.3395baa2.js";
+import { b as base } from "../chunks/paths.31adb4c4.js";
 const Navbar_svelte_svelte_type_style_lang = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -403,8 +403,8 @@ function create_fragment(ctx) {
   let navbar;
   let t2;
   let current;
-  document.title = title_value = "\n        " + /*pageData*/
-  ctx[0].titlePath.join(" | ") + "\n    ";
+  document.title = title_value = "\r\n        " + /*pageData*/
+  ctx[0].titlePath.join(" | ") + "\r\n    ";
   navbar = new Navbar({});
   const default_slot_template = (
     /*#slots*/
@@ -456,8 +456,8 @@ function create_fragment(ctx) {
     },
     p(ctx2, [dirty]) {
       if ((!current || dirty & /*pageData*/
-      1) && title_value !== (title_value = "\n        " + /*pageData*/
-      ctx2[0].titlePath.join(" | ") + "\n    ")) {
+      1) && title_value !== (title_value = "\r\n        " + /*pageData*/
+      ctx2[0].titlePath.join(" | ") + "\r\n    ")) {
         document.title = title_value;
       }
       if (default_slot) {

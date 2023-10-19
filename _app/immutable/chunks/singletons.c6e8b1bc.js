@@ -1,5 +1,5 @@
 import { n as noop, s as safe_not_equal } from "./scheduler.e97e8672.js";
-import { a as assets } from "./paths.67dd4984.js";
+import { a as assets } from "./paths.31adb4c4.js";
 const subscriber_queue = [];
 function writable(value, start = noop) {
   let stop;
@@ -42,7 +42,7 @@ function writable(value, start = noop) {
   }
   return { set, update, subscribe };
 }
-const version = "1697701588610";
+const version = "1697704177639";
 const SNAPSHOT_KEY = "sveltekit:snapshot";
 const SCROLL_KEY = "sveltekit:scroll";
 const INDEX_KEY = "sveltekit:index";
