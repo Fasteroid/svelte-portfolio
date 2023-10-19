@@ -1,7 +1,7 @@
 import { _ } from "../chunks/_page.a9259033.js";
 import { s as safe_not_equal, n as noop } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, s as space, r as create_component, B as head_selector, h as claim_element, x as get_svelte_dataset, f as detach, c as claim_space, u as claim_component, k as attr, y as append_hydration, a as insert_hydration, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.050cbb3d.js";
-import { P as ProjectCollection } from "../chunks/ProjectCollection.bdd65ee4.js";
+import { P as ProjectCollection } from "../chunks/ProjectCollection.af51f438.js";
 function create_fragment(ctx) {
   let style;
   let textContent = ".project-title {\n  color: #000;\n  text-shadow: -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, -1px -1px 5px #fff, 1px -1px 5px #fff, -1px 1px 5px #fff, 1px 1px 5px #fff, 0 0 0.5px #000, 0 0 0.5px #000;\n}";

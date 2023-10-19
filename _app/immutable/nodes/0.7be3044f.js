@@ -1,9 +1,9 @@
 import { _ } from "../chunks/_layout.4fab37f4.js";
 import { s as safe_not_equal, n as noop, c as component_subscribe, d as create_slot, u as update_slot_base, g as get_all_dirty_from_scope, e as get_slot_changes } from "../chunks/scheduler.e97e8672.js";
 import { S as SvelteComponent, i as init, g as element, s as space, h as claim_element, j as children, x as get_svelte_dataset, c as claim_space, f as detach, k as attr, a as insert_hydration, y as append_hydration, z as destroy_each, m as text, n as claim_text, A as toggle_class, r as create_component, B as head_selector, u as claim_component, v as mount_component, d as transition_in, t as transition_out, w as destroy_component } from "../chunks/index.050cbb3d.js";
-import { e as ensure_array_like, p as pagetree } from "../chunks/pagetree.22d7899a.js";
-import { p as page } from "../chunks/stores.775cec0b.js";
-import { b as base } from "../chunks/paths.e5d9a82c.js";
+import { e as ensure_array_like, p as pagetree } from "../chunks/pagetree.a0781c1b.js";
+import { p as page } from "../chunks/stores.118198d1.js";
+import { b as base } from "../chunks/paths.f22af803.js";
 const Navbar_svelte_svelte_type_style_lang = "";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
@@ -61,8 +61,8 @@ function create_if_block(ctx) {
       }
     },
     p(ctx2, dirty) {
-      if (dirty & /*isActive*/
-      1) {
+      if (dirty & /*isActive, currentPage*/
+      3) {
         each_value_1 = ensure_array_like(
           /*main*/
           ctx2[3].getChildren()
@@ -133,8 +133,12 @@ function create_each_block_1(ctx) {
         a,
         "active",
         /*isActive*/
-        ctx[0](`${/*sub*/
-        ctx[6].webPath}`)
+        ctx[1](
+          `${/*sub*/
+          ctx[6].webPath}`,
+          /*currentPage*/
+          ctx[0]
+        )
       );
     },
     m(target, anchor) {
@@ -143,7 +147,22 @@ function create_each_block_1(ctx) {
       append_hydration(span, t0);
       append_hydration(a, t1);
     },
-    p: noop,
+    p(ctx2, dirty) {
+      if (dirty & /*isActive, currentPage*/
+      3) {
+        toggle_class(
+          a,
+          "active",
+          /*isActive*/
+          ctx2[1](
+            `${/*sub*/
+            ctx2[6].webPath}`,
+            /*currentPage*/
+            ctx2[0]
+          )
+        );
+      }
+    },
     d(detaching) {
       if (detaching) {
         detach(a);
@@ -210,9 +229,11 @@ function create_each_block(ctx) {
         div0,
         "active",
         /*isActive*/
-        ctx[0](
+        ctx[1](
           /*main*/
-          ctx[3].webPath
+          ctx[3].webPath,
+          /*currentPage*/
+          ctx[0]
         )
       );
       attr(div1, "class", "dropdown svelte-jgvsl1");
@@ -228,6 +249,20 @@ function create_each_block(ctx) {
       append_hydration(div1, t2);
     },
     p(ctx2, dirty) {
+      if (dirty & /*isActive, currentPage*/
+      3) {
+        toggle_class(
+          div0,
+          "active",
+          /*isActive*/
+          ctx2[1](
+            /*main*/
+            ctx2[3].webPath,
+            /*currentPage*/
+            ctx2[0]
+          )
+        );
+      }
       if (show_if)
         if_block.p(ctx2, dirty);
     },
@@ -309,8 +344,8 @@ function create_fragment$1(ctx) {
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*isActive*/
-      1) {
+      if (dirty & /*isActive, currentPage*/
+      3) {
         each_value = ensure_array_like(pagetree.getChildren());
         let i;
         for (i = 0; i < each_value.length; i += 1) {
@@ -340,13 +375,19 @@ function create_fragment$1(ctx) {
   };
 }
 function instance$1($$self, $$props, $$invalidate) {
+  let currentPage;
   let $page;
-  component_subscribe($$self, page, ($$value) => $$invalidate(1, $page = $$value));
-  const currentPage = $page.url.pathname;
-  function isActive(page2) {
-    return currentPage.startsWith(page2);
+  component_subscribe($$self, page, ($$value) => $$invalidate(2, $page = $$value));
+  function isActive(page2, currentPage2) {
+    return currentPage2.startsWith(page2);
   }
-  return [isActive];
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*$page*/
+    4) {
+      $$invalidate(0, currentPage = $page.url.pathname);
+    }
+  };
+  return [currentPage, isActive, $page];
 }
 class Navbar extends SvelteComponent {
   constructor(options) {
