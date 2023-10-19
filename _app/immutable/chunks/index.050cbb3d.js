@@ -102,6 +102,12 @@ function detach(node) {
     node.parentNode.removeChild(node);
   }
 }
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i])
+      iterations[i].d(detaching);
+  }
+}
 function element(name) {
   return document.createElement(name);
 }
@@ -232,6 +238,9 @@ function set_style(node, key, value, important) {
   } else {
     node.style.setProperty(key, value, important ? "important" : "");
   }
+}
+function toggle_class(element2, name, toggle) {
+  element2.classList.toggle(name, !!toggle);
 }
 function head_selector(nodeId, head) {
   const result = [];
@@ -446,6 +455,8 @@ const PUBLIC_VERSION = "4";
 if (typeof window !== "undefined")
   (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
 export {
+  toggle_class as A,
+  head_selector as B,
   SvelteComponent as S,
   insert_hydration as a,
   check_outros as b,
@@ -471,6 +482,6 @@ export {
   mount_component as v,
   destroy_component as w,
   get_svelte_dataset as x,
-  head_selector as y,
-  append_hydration as z
+  append_hydration as y,
+  destroy_each as z
 };

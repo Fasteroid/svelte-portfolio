@@ -1,5 +1,5 @@
 import { s as safe_not_equal, n as noop } from "./scheduler.e97e8672.js";
-import { S as SvelteComponent, i as init, g as element, m as text, h as claim_element, j as children, n as claim_text, f as detach, k as attr, l as set_style, a as insert_hydration, z as append_hydration, o as set_data } from "./index.79817a2c.js";
+import { S as SvelteComponent, i as init, g as element, m as text, h as claim_element, j as children, n as claim_text, f as detach, k as attr, l as set_style, a as insert_hydration, y as append_hydration, o as set_data } from "./index.050cbb3d.js";
 const BackgroundTitle_svelte_svelte_type_style_lang = "";
 function create_fragment(ctx) {
   let section;

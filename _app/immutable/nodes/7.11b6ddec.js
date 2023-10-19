@@ -1,7 +1,7 @@
 import { l as load$1 } from "../chunks/_page.a9259033.js";
 import { d as defineData } from "../chunks/pagedata.f846d81a.js";
 import { s as safe_not_equal, n as noop } from "../chunks/scheduler.e97e8672.js";
-import { S as SvelteComponent, i as init, g as element, h as claim_element, x as get_svelte_dataset, k as attr, a as insert_hydration, f as detach } from "../chunks/index.79817a2c.js";
+import { S as SvelteComponent, i as init, g as element, h as claim_element, x as get_svelte_dataset, k as attr, a as insert_hydration, f as detach } from "../chunks/index.050cbb3d.js";
 const load = defineData(load$1, {
   title: "Nearby Points",
   thumbnail: "integralabuse.png"

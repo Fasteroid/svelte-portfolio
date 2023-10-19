@@ -1,8 +1,8 @@
 import { l as load$1 } from "../chunks/_layout.4fab37f4.js";
 import { d as defineData } from "../chunks/pagedata.f846d81a.js";
 import { s as safe_not_equal, n as noop } from "../chunks/scheduler.e97e8672.js";
-import { S as SvelteComponent, i as init, g as element, h as claim_element, x as get_svelte_dataset, a as insert_hydration, f as detach } from "../chunks/index.79817a2c.js";
-import { b as base } from "../chunks/paths.9f840d21.js";
+import { S as SvelteComponent, i as init, g as element, h as claim_element, x as get_svelte_dataset, a as insert_hydration, f as detach } from "../chunks/index.050cbb3d.js";
+import { b as base } from "../chunks/paths.cdb2d21c.js";
 const load = defineData(load$1, {
   title: "About"
 });
